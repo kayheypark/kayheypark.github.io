@@ -1,1 +1,20 @@
-header h1 {background-color: aqua;}
+        /* 리셋 */
+        * {margin: 0; padding: 0;}
+        
+        /* 전체레이아웃 */
+        #wrap {font-size: 20px; color: #fff; text-transform: uppercase; text-align: center;}
+        #header { height: 140px;}
+        #banner { height: 450px;background: #4dd0e1; line-height: 450px;}
+        #contents { height: 950px;}
+        #footer { height: 220px;}
+        
+        /* 레이아웃 */
+        #header-top { height: 70px; line-height: 70px; background: #b2ebf2;}
+        #header-nav { height: 70px;line-height: 70px; background: #80deea;}
+        #content1 { height: 90px;line-height: 90px;background-color: #26c6da;}
+        #content2 {height: 480px;line-height: 480px;background-color: #00bcd4;}
+        #content3 {height: 380px;line-height: 380px;background-color: #00acc1;}
+        #footer-nav { height: 60px;line-height: 60px;background-color: #0097a7}
+        #footer-info {height: 160px; line-height: 160px;background-color: #00838f;}
+        /* 컨테이너 */
+        .container {width: 1100px; height: inherit; margin: 0 auto; background: rgba(0,0,0,0.1);}
