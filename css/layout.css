@@ -1,3 +1,7 @@
 /* layout.css */
 
 #wrap {background-color: rgb(39, 39, 66);}
+header {border: 1px solid red;}
+.header_inner {border: 1px solid red;}
+
+#containter {border: 1px solid red;}
