@@ -1,7 +1,19 @@
 /* layout.css */
 
 #wrap {background-color: rgb(39, 39, 66);}
-header {border: 1px solid red;}
-.header_inner {border: 1px solid red;}
+header {
+    position: fixed;
+    width: 100%;
+    font-size: 32px;
+    border: 1px solid red;
+}
+    .header_inner {width: 100%; padding: 30px; border: 1px solid red;}
+    .header_inner h1 {float: left;}
+    .sns_area {border: 1px solid red;}
+    .sns_area li {float: left;}
+    .btn_hamberger {border: 1px solid red;}
+    .gnb {border: 1px solid blue; position: absolute; top: -300px;}
 
-#containter {border: 1px solid red;}
+    .header_inner:after {content: ''; display: block; clear: both;}
+
+#containter {border: 1px solid red; padding-top: 500px;}
