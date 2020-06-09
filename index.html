@@ -22,7 +22,7 @@
                         <li><a href="#"><i class="fab fa-github"></i><span>Github</span></a></li>
                     </ul>
                 </div>
-                <a class="btn_hamberger">더보기</a>
+                <a href="#" class="btn_hamberger">더보기</a>
                 <!-- 네비게이션 -->
                 <nav class="gnb" id="gnb">
                     <ul>
@@ -48,11 +48,13 @@
         </header>
         <!-- //헤더 -->
         <!-- 컨테이너 -->
-        <section id="containter">
+        <div id="containter">
 
             <!-- 1. home -->
-            <article class="home">
-                <h2>Park Gyeong Ho</h2>
+            <section class="home">
+            <h2 class="blind">home</h2>
+            <article class="main">
+                <h3>Park Gyeong Ho</h3>
                 <div class="divLine"></div>
                 <div class="desc_area">
                     <p class="desc">
@@ -63,11 +65,13 @@
                 <div class="view_area"></div>
             </article>
             <!-- //1. home -->
+            </section>
 
             <!-- 2. skills -->
-            <div class="skills">
-                <article class="can">
-                    <h2>Skills</h2>
+            <section class="skills">
+            <h2 class="blind">skills</h2>
+                <article class="skills_can">
+                    <h3>Skills</h3>
                     <div class="divLine"></div>
                     <div class="desc_area">
                         <p class="desc">
@@ -77,8 +81,8 @@
                     <div class="view_area"></div>
                     <span class="order">01</span>
                 </article>
-                <article class="hope">
-                    <h2>Hope Skils</h2>
+                <article class="skills_hope">
+                    <h3>Hope Skils</h3>
                     <div class="divLine"></div>
                     <div class="desc_area">
                         <p class="desc">
@@ -88,14 +92,15 @@
                     <div class="view_area"></div>
                     <span class="order">02</span>
                 </article>
-            </div>
+            </section>
             <!-- //2. skills -->
             
             <!-- 3. works_coding -->
-            <div class="works_coding">
+            <section class="works_coding">
+                <h2 class="blind">works_coding</h2>
                 <!-- 3-1. 삼성전기 -->
                 <article class="samsung">
-                    <h2>삼성전기</h2>
+                    <h3>삼성전기</h3>
                     <div class="divLine"></div>
                     <div class="desc_area">
                         <p class="desc">
@@ -108,7 +113,7 @@
 
                 <!-- 3-2. CJONE -->
                 <article class="cjone">
-                    <h2>CJONE</h2>
+                    <h3>CJONE</h3>
                     <div class="divLine"></div>
                     <div class="desc_area">
                         <p class="desc">
@@ -121,7 +126,7 @@
 
                 <!-- 3-3. 웹표준 -->
                 <article class="webstandard">
-                    <h2>Web Standard</h2>
+                    <h3>Web Standard</h3>
                     <div class="divLine"></div>
                     <div class="desc_area">
                         <p class="desc">
@@ -131,14 +136,15 @@
                     <div class="view_area"></div>
                     <span class="order">03</span>
                 </article>
-            </div>
+            </section>
             <!-- //3. works_coding -->
             
             <!-- 4. works_design -->
-            <div class="works_coding">
+            <section class="works_design">
+                <h2 class="blind">works_design</h2>
                 <!-- 4-1. 앱디자인 -->
                 <article class="appDsg">
-                    <h2>알지</h2>
+                    <h3>알지</h3>
                     <div class="divLine"></div>
                     <div class="desc_area">
                         <p class="desc">
@@ -151,7 +157,7 @@
 
                 <!-- 4-2. 반응형웹디자인 -->
                 <article class="webDsg">
-                    <h2>알지</h2>
+                    <h3>알지</h3>
                     <div class="divLine"></div>
                     <div class="desc_area">
                         <p class="desc">
@@ -164,7 +170,7 @@
 
                 <!-- 4-3. 퓨어 CSS -->
                 <article class="cssDsg">
-                    <h2>알지</h2>
+                    <h3>알지</h3>
                     <div class="divLine"></div>
                     <div class="desc_area">
                         <p class="desc">
@@ -174,15 +180,15 @@
                     <div class="view_area"></div>
                     <span class="order">03</span>
                 </article>
-            </div>
+            </section>
             <!-- //4. works_design -->
 
 
 
 
             <!-- 5. contact -->
-            <article class="contact">contact me</article>
-        </section>
+            <section class="contact">contact me</section>
+        </div>
         <!-- //컨테이너 -->
     </div>
     <!-- //전체레이아웃  -->
