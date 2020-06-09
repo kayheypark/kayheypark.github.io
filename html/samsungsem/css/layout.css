@@ -1,0 +1,49 @@
+/* layout.css /
+
+
+/* Main layout*/
+#wrap {width: 100%;}
+.header_wrap:after {content: ""; display: block; clear: both;}
+    .main_banner:after {content: "";display: block;clear: both;}
+     .aboutus_warp .inner {width: 1332px; margin: 0 auto;}
+     .aboutus_warp::after {content: "";display: block;clear: both;}
+     .newsroom_wrap {height: 892px; padding-top: 82px; background: url(../images/bg_newsroom.jpg) repeat-x 0 0;}
+     .newsroom_wrap .inner {width: 1332px; height: 610px; margin: 0 auto; background: #fff;}
+     .product_wrap .inner {width: 1332px; margin: 0 auto; margin-bottom: 121px;}
+     #container:after {content: "";display: block;clear: both;}
+    #sitemap_wrap .inner {width: 1332px; margin: 0 auto;}
+    #sitemap_wrap:after {content: "";display: block;clear: both;}
+    #footer {width: 1920px; height: 137px; background: #474b50; margin: 0 auto;}
+
+/* Sub1 layout */
+.spot {width: 1920px; height: 320px; margin: 0 auto;  background: url(../images/faq_visual_img.jpg) no-repeat 0 0;}
+.spot .inner {position: relative;  margin: 0 auto; width: 1920px; height: 222px; padding-top: 100px; }
+#content {width: 1920px; margin: 0 auto; padding: 100px 0 160px;}
+.faq::after {content: ""; display: block; clear: both;}
+.step1 {width: 1140px; margin: 0 auto; margin-bottom: 120px;}
+.step1::after {content: ""; display: block; clear: both;}
+.step2 {width: 1140px;  margin: 0 auto;}
+.step2::after {content: ""; display: block; clear: both;}
+.agree {width: 1140px; border:  1px solid #ccc; margin: 0 auto; padding: 48px 50px; box-sizing: border-box;}
+.agree:after {content: ""; display: block; clear: both;}
+
+/* 스팟 */
+.spot h2 {width: 1140px; margin-bottom: 15px;}
+.spot p {width: 1140px; font-size: 16px; color: #eee;}
+.spot p.path {position: absolute; bottom: 20px; right: 0; font-size: 14px; color: #ccc; text-align: right;}
+
+.faq {width: 1080px;  margin: 0 auto; margin-bottom: 60px; padding: 20px 30px; border: 1px solid #ccc; color: #333;}
+.faq p {float: left; padding-top: 13px;}
+.faq a {float: right; display: block; width: 160px; height: 45px; line-height: 45px; text-indent: 15px; background: #043285; color: #fff; text-decoration: none;}
+
+/* Sub2 layout*/
+
+    #header {height: 70px;}
+    #header:after {content: "";display: block;clear: both;}
+        .content {padding: 100px 0 160px; color: #333;}
+     /*스팟*/
+     .spot .inner {position: relative;}
+     .spot .inner h2 {display: block; width: 1140px; height: 50px; margin: 0 auto 15px auto; color: #fff;}
+     .spot .inner p.txt{display: block; width: 1140px; height: 24px; padding-top: 10px; margin: 0 auto;font-size: 16px; color: #eee;}
+     .spot .inner p.path{position: absolute; right: 390px; bottom: 24px; color: #ccc}
+     .spot .inner p.path a{color: #ccc; text-decoration: none; font-size: 14px;}

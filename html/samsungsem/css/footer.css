@@ -1,0 +1,40 @@
+/* footer.css */
+
+
+/*푸터*/
+#footer { font-size: 14px;}
+#footer .inner {width: 1141px; height: 137px; margin: 0 auto;}
+/*푸터탑*/
+.footer_top {height: 63px; border-bottom: 1px solid #6c6f73;}
+.footer_top .list1 ul {padding-top: 30px;}
+.footer_top .list1 ul li {}
+.footer_top .list1 ul li a {float: left;   color: #fff; text-decoration: none; padding-right: 15px; padding-left: 15px; border-right: 1px solid #8c8e90;}
+.footer_top .list1 ul li:first-child a {padding-left: 0;}
+.footer_top .list1 ul li:last-child a {border:none;}
+
+    /*SNS,인증마크*/
+    .list2 {float: right; width: 162px; margin-top: -5px;}
+    .list2 ul li {float: left; text-indent: -9999px; overflow: hidden; padding-top: 5px;}
+    .list2 ul li a {display: block; width: 30px; height: 19px; background: url(../images/sns_link_ico.png) no-repeat -30px 0;}
+    .list2 ul li:nth-child(2) a {background-position-x: 0px; margin-left: 10px;}
+    .list2 ul li:nth-child(3) a {background-position-x: -60px;}
+    .list2 ul li:nth-child(4) a {background-position-x: -90px;}
+    .list2 p.mark { float: right;}
+ 
+/*푸터바텀*/
+.foooter_bot {}
+.foooter_bot .list3 {padding-top: 15px;}
+.foooter_bot .list3 ul li {float: left;}
+.foooter_bot .list3 ul li a {text-decoration: none; color: #b2b2b4; margin-right: 29px;}
+.foooter_bot .list3 ul li:nth-child(3) a {color: #1cbeef;}
+
+.copyright {float: right; color: #b2b2b4; letter-spacing: 0px;}
+
+
+/*탑으로버튼*/
+.to_top {position: fixed; bottom: 15%; right: 10%; line-height: 75px;}
+.to_top a {display: block; width: 60px;  height: 60px;
+    border: 1px solid #111;
+    text-align: center; text-decoration: none; color:  black;
+background: #fff url(../images/top_btn_ico.png) no-repeat 50% 10px;
+}

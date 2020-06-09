@@ -1,0 +1,137 @@
+
+
+/*폰트*/
+@font-face {font-family: "NotoSans-Bold"; src:url(../font/NotoSans-Bold.ttf) ;}
+@font-face {font-family: "NotoSans-BoldItalic"; src:url(../font/NotoSans-BoldItalic.ttf) ;}
+@font-face {font-family: "NotoSans-Italic"; src:url(../font/NotoSans-Italic.ttf) ;}
+@font-face {font-family: "NotoSans-Regular"; src:url(../font/NotoSans-Regular.ttf) ;}
+
+@font-face {font-family: "NotoSansKR-Black"; src: url(../font/NotoSansKR-Black.otf);}
+@font-face {font-family: "NotoSansKR-Bold"; src: url(../font/NotoSansKR-Bold.otf);}
+@font-face {font-family: "NotoSansKR-Light"; src: url(../font/NotoSansKR-Light.otf);}
+@font-face {font-family: "NotoSansKR-Medium"; src: url(../font/NotoSansKR-Medium.otf);}
+@font-face {font-family: "NotoSansKR-Regular"; src: url(../font/NotoSansKR-Regular.otf;)}
+@font-face {font-family: "NotoSansKR-Thin"; src: url(../font/NotoSansKR-Thin.otf);}
+
+/* common */
+
+body a {text-decoration: none; color: black;}
+h2 {font-size: 50px; color: #fff;font-weight: bold;}
+h3 {font-size: 38px; font-weight: bold; margin-bottom: 30px; padding-bottom: 30px;}
+h4 {width: 1140px; margin: 0 auto; font-size: 30px; margin-bottom: 30px;}
+h5 {font-size: 16px; color: #0079cc; margin-bottom: 8px;}
+strong {font-weight: bold; color: #0079cc;}
+input, select {box-sizing: border-box; border: 1px solid #ccc;}
+.line {margin-bottom: 27px; padding-bottom: 27px; border-bottom: 1px solid #ccc;}
+.p_tit {font-size: 20px; font-weight: bold; margin: 13px 0;}
+
+
+
+
+
+/* 스텝1 */
+.step1 h3 {position: relative;}
+.step1 h3::after { 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: #0079cc;
+    content: "";}
+.step1 ul li a {
+    float: left;
+    display: block;
+    width: 160px;
+    height: 50px;
+    padding-top: 120px;
+    border:  1px solid #ccc;
+    text-align: center;
+    font-size: 18px;
+    background:  url(../images/ico_inquiry_02.png) no-repeat 50% 30px;
+                }
+.step1 ul li:first-child a {color: #fff; background: #043285 url(../images/ico_inquiry_on_01.png)  no-repeat 50% 30px;}
+.step1 ul li:nth-child(2) a {background-image: url(../images/ico_inquiry_02.png);}
+.step1 ul li:nth-child(3) a {background-image: url(../images/ico_inquiry_03.png);}
+.step1 ul li:nth-child(4) a {background-image: url(../images/ico_inquiry_04.png);}
+.step1 ul li:nth-child(5) a {background-image: url(../images/ico_inquiry_05.png);}
+.step1 ul li:nth-child(6) a {background-image: url(../images/ico_inquiry_06.png);}
+.step1 ul li:nth-child(7) a {background-image: url(../images/ico_inquiry_07.png);}
+    
+.step1 ul li a { border-right: none;}
+.step1 ul li:last-child a { border-right: 1px solid #ccc;}
+/* 스텝2 */
+.step2 h3 {position: relative;}
+.step2 h3::after { 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: #0079cc;
+    content: "";}
+.step2 p.sec_txt {font-size: 16px;}
+.step2 p.form_desc {font-size: 16px; text-align: right; margin-bottom: 8px;}
+
+.info_form {width: 980px; padding: 55px 80px 50px; background-color: #f3f3f3; border-top: 1px solid #000;border-bottom: 1px solid #000; margin-bottom: 82px;}
+.info_form select {width: 980px; height: 45px; padding-left: 10px;}
+.info_form li.product select {width: 310px; height: 45px; padding: 10px;}
+.info_form li.product select:nth-of-type(2) {margin: 0 14px;}
+.form_tit {display: block; font-weight: bold; font-size: 20px; width: 980px; margin: 13px 0;}
+li:first-child .form_tit {margin-top: 0;}
+
+.info_form input[type="text"], .info_form input[type="email"] {width: 980px; height: 45px; padding-left: 10px;}
+
+/*거래여부*/
+
+/* 이름 */
+.name_area {float: left;  }
+.name_area .form_tit {width: 480px;}
+.userNameL, .userNameF {float: left; width: 480px;}
+.userNameF {margin-left: 20px;}
+.userNameL input[type="text"], .userNameF input[type="text"] {width: 480px; padding: 0 15px;}
+
+/*회사 조직*/
+.company {clear: both;}
+
+/*전화번호*/
+#tel {width: 310px; padding: 0 15px; box-sizing: border-box;}
+.tel span {display: inline-block; width: 38px; height: 45px; text-align: center;}
+#number {width: 615px; padding: 0 15px; box-sizing: border-box;}
+.example {padding-top: 5px; font-size: 16px;}
+
+/*이메일*/
+/*내용*/
+.naeyong input[type="text"] {height: 280px; text-align: left; vertical-align: top;}
+
+/*첨부파일*/
+.attach span {display: block; font-size: 20px; font-weight: bold; margin: 13px 0; width: 980px;}
+.attach input[type="text"] {width: 810px; padding: 0 15px; background-color: #fff;}
+.attach label {display: inline-block; width: 160px; height: 45px; background-color: #333;
+    color: #fff; font-size: 16px; line-height: 45px; text-align: center;
+}
+.attach ul {padding-top: 5px;}
+.attach ul li {font-size: 16px; margin-bottom: 5px;}
+
+
+/*뉴스레터 구독*/
+.mailing_agreebox {display: inline-block; width: 137px; font-size: 16px;}
+.mailing p.txt {font-size: 16px; margin-top: 15px;}
+
+/* 개인정보수집 이용동의 */
+.agree {font-size: 16px;}
+.agree p.txt {margin-bottom: 34px;}
+.agree dt {color: red;}
+
+.reqire, .option {float: left; width: 520px; box-sizing: border-box;}
+.option {width: 470px;}
+.reqire {border-right: 1px solid #ccc; padding-right: 45px; margin-right: 45px;}
+.Item dl {height: 112px;}
+.Item li {padding-left: 15px; background: url(../images/bg_list_dot.gif) no-repeat 0 50%;}
+p.notice {margin-top: 25px;}
+p.agree_bottom {width: 310px; padding-top: 30px;}
+
+.finalOk {display: block; width: 160px; height: 45px;
+     background: #043285; color:#fff;
+    margin: 0 auto;
+margin-top: 30px;}

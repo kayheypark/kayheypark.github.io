@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼성전기</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+   
+</head>
+
+<body>
+    <!-- 스킵네비 -->
+    <div id="skipNavi">
+        <ul title="바로가기">
+            <li><a href="#container">본문 바로가기</a></li>
+            <li><a href="#gnb">대메뉴 바로가기</a></li>
+            <li><a href="#sitemap_wrap">사이트맵 바로가기</a></li>
+            <li><a href="#footer">하단메뉴 바로가기</a></li>
+        </ul>
+    </div>
+    <!-- //스킵네비 -->
+    <hr />
+    <!-- 전체레이아웃 -->
+    <div id="wrap">
+        <!-- 헤더 -->
+        <? include "header.html"; ?>
+        
+        
+        <!-- //헤더 -->
+
+        <hr />
+        <!-- 메인배너 -->
+        <div class="main_banner main_visual"> <!-- bodysection-->
+            <h3 class="blind">메인배너</h3>
+            <div class="inner slide_wrap"> <!-- book_frame-->
+                <!-- 비디오와 글귀 -->
+                
+                    <div id="slide1" class="slide1 slide active">
+                        <video autoplay muted loop poster="images/main_video_thum1.jpg">
+                            <source src="images/main_video1.mp4" type="video/mp4">
+                        </video>
+                        <p><span>5G 시대를 맞이하여 더 앞선 기술로<br />더 나은 세상을 열어 갑니다</span></p>
+                    </div>
+
+                    <div id="slide2" class="slide2 slide">
+                        <video autoplay muted loop poster="images/main_video_thum2.jpg">
+                            <source src="images/main_video2.mp4" type="video/mp4">
+                        </video>
+                        <p><span>최첨단 스마트폰과 다양한 디바이스를 위한<br />최적의 솔루션으로 더 나은 내일을 만들고 있습니다</span></p>
+                    </div>
+
+                    <div id="slide3" class="slide3 slide">
+                        <video autoplay muted loop poster="images/main_video_thum3.jpg">
+                            <source src="images/main_video3.mp4" type="video/mp4">
+                        </video>
+                        <p><span>4차 산업혁명을 현실로 만드는<br />첨단 융복합 기술을 이끌어 가고 있습니다</span></p>
+                    </div>
+
+            </div>
+                
+                <!-- //비디오와 글귀 -->
+                <ul class="slide_ctrl">
+                    <li><a href="#slide1" class="active">1번 슬라이드 이동</a></li>
+                    <li><a href="#slide2">2번 슬라이드 이동</a></li>
+                    <li><a href="#slide3">3번 슬라이드 이동</a></li>
+                    <li class="pause"><a href="#">일시정지</a></li>
+                </ul>
+                <div class="btn_box">
+                    <button class="prev" style="cursor: pointer;">이전</button>
+                    <button class="next" style="cursor: pointer;">다음</button>
+                </div>
+            </div>
+        
+        <!-- //메인배너 -->
+        <!-- 컨테이너 -->
+        <div id="container">
+            <!-- aboutus_warp -->
+            <div class="aboutus_warp">
+                <!-- 기업정보 -->
+                <div class="inner">
+                    <h2>기업정보</h2>
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt>설립연도</dt>
+                                <dd><span class="num">1973</span>년</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>매출</dt>
+                                <dd><span class="num">8</span>조 <span class="num">408</span>억 원</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>자산</dt>
+                                <dd><span class="num">8</span>조 <span class="num">6,742</span>억 원</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>생산거점 및 판매거점</dt>
+                                <dd><span class="num">5</span>개국 <span class="num">9</span>개 / <span
+                                        class="num">8</span>개국
+                                    <span class="num">16</span>개</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <div class="more_wrap">
+                        <p class="more"><a href="#">자세히보기</a></p>
+                        <p>(*2019년 연결 기준)</p>
+                    </div>
+                </div>
+                <!-- //기업정보 -->
+            </div>
+            <!-- //aboutus_warp -->
+            <!-- newsroom_wrap -->
+            <div class="newsroom_wrap">
+                <!-- inner -->
+                <div class="inner">
+                    <h2>뉴스룸</h2>
+                    <!-- 소식 -->
+                    <ul class="news_list">
+                        <li>
+                            <a href="#">직장인 사내 솔직 토크<br />워키토키 | 신입사원 흑역사편</a>
+                            <span class="date">2020.03.26</span>
+                        </li>
+                        <li>
+                            <a href="#">삼성전기 공식 홈페이지<br /> 리뉴얼 설문</a>
+                            <span class="date">2020.03.26</span>
+                        </li>
+                        <li>
+                            <a href="#">코로나19, 다 함께 한<br /> 마음으로 이겨냅시다.</a>
+                            <span class="date">2020.03.20</span>
+                        </li>
+                        <li>
+                            <a href="#">삼성맨이 돌아왔다! |<br /> 육아휴직 후 돌아온 워킹맘&<br />대디편</a>
+                            <span class="date">2020.03.19</span>
+                        </li>
+                    </ul>
+                    <!-- //소식 -->
+                    <!-- 뉴스레터, 소셜 랩 -->
+                    <div class="ls_wrap">
+
+                        <!-- newsletter_wrap -->
+                        <div class="news_letter">
+                            <h3>뉴스레터</h3>
+                            <p>삼성전기의 주요소식들을 신속하게 전해드립니다.</p>
+                            <div class="btn_wrap">
+                                <a href="#">뉴스레터 보기</a>
+                                <a href="#">뉴스레터 신청</a>
+                            </div>
+                        </div>
+                        <!-- //newsletter_wrap -->
+                        <!-- social_wrap -->
+                        <div class="social_wrap">
+                            <h3>소셜채널</h3>
+                            <p>삼성전기의 다양한 소셜채널을 만나보세요</p>
+                            <ul>
+                                <li><a href="#">유튜브</a></li>
+                                <li><a href="#">블로그</a></li>
+                                <li><a href="#">페이스북</a></li>
+                                <li><a href="#">링크드인</a></li>
+                            </ul>
+                        </div>
+                        <!-- //social_wrap -->
+                    </div>
+                    <!-- //뉴스레터, 소셜 랩 -->
+                </div>
+                <!-- //inner -->
+            </div>
+            <!-- //newsroom_wrap -->
+            <!-- product_wrap -->
+            <div class="product_wrap">
+                <!-- 제품정보 -->
+                <div class="inner">
+                    <h2>제품정보</h2>
+                    <div class="pdct1 pdbox">
+                        <h3>컴포넌트</h3>
+                        <p>전자회로에서 신호의 흐름을<br />조절하는 Passive(수동) 부품입니다.</p>
+                        <ul>
+                            <li><a href="#">MLCC</a></li>
+                            <li><a href="#">Inductor</a></li>
+                            <li><a href="#">Chip Resistor</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="pdct2 pdbox">
+                        <h3>모듈</h3>
+                        <p>복수의 전자부품이나 기계부품 등으로 조립된<br />특정 기능을 가진 장치입니다.</p>
+                        <ul>
+                            <li><a href="#">Camera Module</a></li>
+                            <li><a href="#">Communication Module</a></li>
+                        </ul>
+                    </div>
+                    <div class="pdct3 pdbox">
+                        <h3>인쇄회로기판</h3>
+                        <p>반도체, 수동소자 등 각종 전자부품을<br />상호 연결시켜 주는 역할을 합니다.</p>
+                        <ul>
+                            <li><a href="#">Package Substrate</a></li>
+                            <li><a href="#">RFPCB</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //제품정보 -->
+            </div>
+            <!-- //product_wrap -->
+        </div>
+        <!-- //컨테이너 -->
+        <!-- sitemap_wrap -->
+        <div id="sitemap_wrap">
+            <!-- 사이트맵 -->
+            <div class="inner">
+                <h2 class="blind">사이트맵</h2>
+                <ul>
+                    <li><a href="#">기업정보</a>
+                        <ul>
+                            <li><a href="#">기업소개</a></li>
+                            <li><a href="#">IR</a></li>
+                            <li><a href="#">지속가능성</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">인재채용</a>
+                        <ul>
+                            <li><a href="#">직무 소개</a></li>
+                            <li><a href="#">회사생활</a></li>
+                            <li><a href="#">채용프로세스</a></li>
+                            <li><a href="#">채용공고</a></li>
+                            <li><a href="#">채용 Tips</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">뉴스룸</a>
+                        <ul>
+                            <li><a href="#">뉴스</a></li>
+                            <li><a href="#">뉴스레터</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">제품정보</a>
+                        <ul>
+                            <li><a href="#">컴포넌트</a></li>
+                            <li><a href="#">모듈</a></li>
+                            <li><a href="#">인쇄회로기판</a></li>
+                            <li><a href="#">적용분야</a></li>
+                            <li><a href="#">Product Search</a></li>
+                            <li><a href="#">Component Library</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객지원</a>
+                        <ul>
+                            <li><a href="#">고객문의</a></li>
+                            <li><a href="#">Sales Partners</a></li>
+                            <li><a href="#">인증서</a></li>
+                            <li><a href="#">기술자료</a></li>
+                            <li><a href="#">B2Bi (EDI)</a></li>
+                            <li><a href="#">대금지불 안내</a></li>
+                            <li><a href="#">방문신청</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- //사이트맵 -->
+        </div>
+        <!-- //sitemap_wrap -->
+        <hr />
+        <!-- 푸터 -->
+        <? include "footer.html"; ?>
+        <!-- //푸터 -->
+        <hr />
+        <!-- 탑버튼 -->
+        <div class="to_top on">
+            <a href="#" title="맨위로 올라가기">TOP</a>
+        </div>
+        <!-- //탑버튼 -->
+    </div>
+    <!-- //전체레이아웃 -->
+</body>
+
+</html>

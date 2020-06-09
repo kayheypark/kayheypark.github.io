@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품문의 | 문의하기 | 삼성전기</title>
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/sub1.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <!-- 전체레이아웃 -->
+    <div id="wrap">
+
+    <!-- 헤더 -->
+    <? include "header.html"; ?>
+    <!-- //헤더 -->
+
+        <!-- 컨테이너 -->
+        <div id="container">
+            <!-- 스팟 전체레이아웃 -->
+            <div class="spot">
+                <!-- 이너(스팟)-->
+                <div class="inner">
+                    <h2>문의하기</h2>
+                    <p class="txt">
+                        삼성전기는 고객님의 말씀에 귀를 기울이며<br />
+                        언제나 편안한 서비스를 제공하기 위하여 최선을 다하겠습니다.
+                    </p>
+                    <p class="path">
+                        홈 &gt; 고객지원 &gt; 고객문의 &gt; 문의하기
+                    </p>
+                </div>
+                <!-- //이너(스팟) -->
+            </div>
+            <!-- //스팟 전체레이아웃 -->
+            <!-- content -->
+            <div id="content">
+
+
+                <!-- FAQ -->
+                <div class="faq">
+                    <h2 class="blind">자주하는 질문</h2>
+                    <p>자주 문의하시는 질문들은 FAQ에서 빠르게 확인 가능합니다.</p>
+                    <a href="#">FAQ 바로가기</a>
+                </div>
+                <!-- //FAQ -->
+                <!-- 스텝1 -->
+                <div class="step1">
+                    <h3>Step 1. 문의유형 선택</h3>
+                    <ul>
+                        <li><a href="#">제품문의</a></li>
+                        <li><a href="#">기술문의</a></li>
+                        <li><a href="#">인증서</a></li>
+                        <li><a href="#">채용문의</a></li>
+                        <li><a href="#">기업정보</a></li>
+                        <li><a href="#">IR</a></li>
+                        <li><a href="#">제휴문의</a></li>
+                    </ul>
+                </div>
+                <!-- //스텝1 -->
+                <!-- 스텝2 -->
+                <div class="step2">
+                    <h3>Step 2. 문의하기</h3>
+                    <p class="sec_txt">
+                        삼성전기 고객 문의 시 문의 제품/구분을 정확하게 선택해주시면 보다 신속한 답변을 받으실 수 있습니다.<br />
+                        문의 유형이 내용과 다를 경우, 답변을 받으시는데 시간이 소요될 수 있음을 안내 드립니다.
+                    </p>
+                    <p class="form_desc"><strong>*</strong> 필수 입력 항목입니다.</p>
+                    <form class="info_form" action="/" method="post">
+                        <fieldset>
+                            <legend class="blind">문의 정보 입력란</legend>
+                            <ul>
+                                <!-- 구분 -->
+                                <li class="type">
+                                    <label class="form_tit" for="type"><strong>*</strong> 구분</label>
+                                    <select name="type" id="type" title="구분을 선택해주세요">
+                                        <option value="">선택</option>
+                                        <option value="sales">구입문의</option>
+                                        <option value="sample">샘플요청</option>
+                                        <option value="quotation">견적요청</option>
+                                        <option value="weblibrary">Component Library 관련 문의</option>
+                                    </select>
+                                </li>
+                                <!-- //구분 -->
+                                <!-- 제품 -->
+                                <li class="product">
+                                    <label class="form_tit" for="product"><strong>*</strong> 제품</label>
+                                    <select name="product" id="product" title="제품정보를 선택해주세요">
+                                        <option value="product">PRODUCT</option>
+                                        <option value="psvComponent">Passive Component</option>
+                                        <option value="automotive">Automotive</option>
+                                    </select>
+                                    <select name="desc1" id="desc1" title="세부정보를 선택해주세요">
+                                        <option value="product">PRODUCT</option>
+                                    </select>
+                                    <select name="desc2" id="desc2" title="세부정보를 선택해주세요">
+                                        <option value="product">PRODUCT</option>
+                                    </select>
+                                </li>
+                                <!-- //제품 -->
+                                <!-- 파트번호 -->
+                                <li class="partNum">
+                                    <label class="form_tit" for="partNum">Part Number</label>
+                                    <input type="text" name="partNum" id="partNum" title="생산번호를 입력해주세요." />
+                                </li>
+                                <!-- //파트번호 -->
+                                <!-- 삼성전기 거래여부 -->
+                                <li class="trade line">
+                                    <label class="form_tit" for="trade">삼성전기 거래여부</label>
+                                    <select name="trade" id="trade" title="삼성전기 거래여부를 선택해주세요">
+                                        <option value="1">삼성전기 거래중</option>
+                                        <option value="2">삼성전기 Sales Partners 거래중</option>
+                                        <option value="3">거래 예정</option>
+                                        <option value="4">기타</option>
+                                    </select>
+                                </li>
+                                <!-- //삼성전기 거래여부 -->
+                                <!-- 국가 -->
+                                <li class="contury">
+                                    <label class="form_tit" for="contury"><strong>*</strong> 국가</label>
+                                    <select name="contury" id="contury" title="국가를 선택해주세요">
+                                        <option value="KR" selected="selected">Korea, Republic Of</option>
+                                        <option value="CN">China</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="TH">Thailand</option>
+                                        <option value="IN">India</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="PH">Philippines</option>
+                                        <option value="VN">Viet Nam</option>
+                                        <option value="US">United States</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AX">Aland Islands</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="AS">American Samoa</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AQ">Antarctica</option>
+                                        <option value="AG">Antigua And Barbuda</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AZ">Azerbaijan</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BY">Belarus</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BZ">Belize</option>
+                                        <option value="BJ">Benin</option>
+                                        <option value="BM">Bermuda</option>
+                                        <option value="BT">Bhutan</option>
+                                        <option value="BO">Bolivia</option>
+                                        <option value="BA">Bosnia And Herzegovina</option>
+                                        <option value="BW">Botswana</option>
+                                        <option value="BV">Bouvet Island</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="IO">British Indian Ocean Territory</option>
+                                        <option value="BN">Brunei Darussalam</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="KH">Cambodia</option>
+                                        <option value="CM">Cameroon</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="CV">Cape Verde</option>
+                                        <option value="KY">Cayman Islands</option>
+                                        <option value="CF">Central African Republic</option>
+                                        <option value="TD">Chad</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CX">Christmas Island</option>
+                                        <option value="CC">Cocos (Keeling) Islands</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="KM">Comoros</option>
+                                        <option value="CG">Congo</option>
+                                        <option value="CD">Congo The Democratic Republic Of The</option>
+                                        <option value="CK">Cook Islands</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="CI">Cote DIvoire</option>
+                                        <option value="HR">Croatia</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="CY">Cyprus</option>
+                                        <option value="CZ">Czech Republic</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="DJ">Djibouti</option>
+                                        <option value="DM">Dominica</option>
+                                        <option value="DO">Dominican Republic</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="GQ">Equatorial Guinea</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="ET">Ethiopia</option>
+                                        <option value="FK">Falkland Islands (Malvinas)</option>
+                                        <option value="FO">Faroe Islands</option>
+                                        <option value="FJ">Fiji</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="FR">France</option>
+                                        <option value="GF">French Guiana</option>
+                                        <option value="PF">French Polynesia</option>
+                                        <option value="TF">French Southern Territories</option>
+                                        <option value="GA">Gabon</option>
+                                        <option value="GM">Gambia</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GI">Gibraltar</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="GL">Greenland</option>
+                                        <option value="GD">Grenada</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GU">Guam</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GW">Guinea-Bissau</option>
+                                        <option value="GY">Guyana</option>
+                                        <option value="HT">Haiti</option>
+                                        <option value="HM">Heard Island And Mcdonald Islands</option>
+                                        <option value="VA">Holy See (Vatican City State)</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HU">Hungary</option>
+                                        <option value="IS">Iceland</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IR">Iran Islamic Republic Of</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JO">Jordan</option>
+                                        <option value="KZ">Kazakhstan</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="KG">Kyrgyzstan</option>
+                                        <option value="LA">Lao PeopleS Democratic Republic</option>
+                                        <option value="LV">Latvia</option>
+                                        <option value="LB">Lebanon</option>
+                                        <option value="LS">Lesotho</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LY">Libyan Arab Jamahiriya</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LT">Lithuania</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="MO">Macao</option>
+                                        <option value="MK">Macedonia The Former Yugoslav Republic Of</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MW">Malawi</option>
+                                        <option value="MY">Malaysia</option>
+                                        <option value="MV">Maldives</option>
+                                        <option value="ML">Mali</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MH">Marshall Islands</option>
+                                        <option value="MQ">Martinique</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="MU">Mauritius</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="FM">Micronesia Federated States Of</option>
+                                        <option value="MD">Moldova</option>
+                                        <option value="MC">Monaco</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="ME">Montenegro</option>
+                                        <option value="MS">Montserrat</option>
+                                        <option value="MA">Morocco</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="MM">Myanmar</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NL">Netherlands</option>
+                                        <option value="AN">Netherlands Antilles</option>
+                                        <option value="NC">New Caledonia</option>
+                                        <option value="NZ">New Zealand</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NE">Niger</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NU">Niue</option>
+                                        <option value="NF">Norfolk Island</option>
+                                        <option value="MP">Northern Mariana Islands</option>
+                                        <option value="NO">Norway</option>
+                                        <option value="OM">Oman</option>
+                                        <option value="PK">Pakistan</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="PS">Palestinian Territory, Occupied</option>
+                                        <option value="PA">Panama</option>
+                                        <option value="PG">Papua New Guinea</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="PE">Peru</option>
+                                        <option value="PN">Pitcairn</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="RE">Reunion</option>
+                                        <option value="RO">Romania</option>
+                                        <option value="RU">Russian Federation</option>
+                                        <option value="RW">Rwanda</option>
+                                        <option value="SH">Saint Helena</option>
+                                        <option value="KN">Saint Kitts And Nevis</option>
+                                        <option value="LC">Saint Lucia</option>
+                                        <option value="PM">Saint Pierre And Miquelon</option>
+                                        <option value="VC">Saint Vincent And The Grenadines</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="ST">Sao Tome And Principe</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="RS">Serbia</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SL">Sierra Leone</option>
+                                        <option value="SK">Slovakia</option>
+                                        <option value="SI">Slovenia</option>
+                                        <option value="SB">Solomon Islands</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="ZA">South Africa</option>
+                                        <option value="GS">South Georgia And The South Sandwich Islands</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="SD">Sudan</option>
+                                        <option value="SR">Suriname</option>
+                                        <option value="SJ">Svalbard And Jan Mayen</option>
+                                        <option value="SZ">Swaziland</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="CH">Switzerland</option>
+                                        <option value="SY">Syrian Arab Republic</option>
+                                        <option value="TJ">Tajikistan</option>
+                                        <option value="TZ">Tanzania, United Republic Of</option>
+                                        <option value="TL">Timor-Leste</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TK">Tokelau</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TT">Trinidad And Tobago</option>
+                                        <option value="TN">Tunisia</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="TM">Turkmenistan</option>
+                                        <option value="TC">Turks And Caicos Islands</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UA">Ukraine</option>
+                                        <option value="AE">United Arab Emirates</option>
+                                        <option value="GB">United Kingdom</option>
+                                        <option value="UM">United States Minor Outlying Islands</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistan</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="VE">Venezuela</option>
+                                        <option value="VG">Virgin Islands, British</option>
+                                        <option value="VI">Virgin Islands U.S.</option>
+                                        <option value="WF">Wallis And Futuna</option>
+                                        <option value="EH">Western Sahara</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZW">Zimbabwe</option>
+                                    </select>
+                                </li>
+                                <!-- //국가 -->
+                                <li class="name_area line">
+                                    <!-- 이름 -->
+                                        <div class="userNameL">
+                                            <label class="form_tit" for="lastName"><strong>*</strong> 이름</label>
+                                            <input type="text" id="lastName" title="이름을 입력해주세요" />
+                                        </div>
+                                    <!-- //이름 -->
+                                    <!-- 성 -->
+                                    <div class="userNameF">
+                                        <label class="form_tit" for="firstName"><strong>*</strong> 성</label>
+                                        <input type="text" id="firstName" title="성을 입력해주세요" />
+                                    </div>
+                                </li>
+                                    <!-- //성 -->
+                                    <!-- 회사 및 조직 -->
+                                <li class="company">
+                                    <label class="form_tit" for="company"><strong>*</strong> 회사/조직</label>
+                                    <input type="text" id="company" title="회사/조직을 입력해주세요" />
+                                </li>
+                                <!-- //회사 및 조직 -->
+                                <!-- 부서 -->
+                                <li class="part">
+                                    <label class="form_tit" for="part">부서</label>
+                                    <input type="text" id="part" title="부서를 입력해주세요" />
+                                </li>
+                                <!-- //부서 -->
+                                <!-- 전화번호 -->
+                                <li class="tel">
+                                    <p class="p_tit">전화번호</p>
+                                    <input class="tel_first" type="text" id="tel" title="국가코드" placeholder="+82" />
+                                    <span> - </span>
+                                    <input class="tel_last" type="text" id="number" title="나머지 번호를 입력해주세요" />
+                                    <p class="example">Ex) +82 31-1234-1234, +82 03112341234</p>
+                                </li>
+                                <!-- //전화번호 -->
+                                <!-- 이메일 -->
+                                <li class="line">
+                                    <label class="form_tit userEmail" for="userEmail"><strong>*</strong> 이메일</label>
+                                    <input type="email" id="userEmail" title="이메일을 입력해주세요" />
+                                </li>
+                                <!-- //이메일 -->
+                                <!-- 내용 -->
+                                <li class="naeyong">
+                                    <label class="form_tit" for="contnt"><strong>*</strong> 내용</label>
+                                    <input type="text" id="contnt" title="문의하실 내용을 입력해주세요" />
+                                </li>
+                                <!-- //내용 -->
+                                <!-- 첨부파일 -->
+                                <li class="attach">
+                                    <span>첨부파일</span>
+                                    <input type="text" value="파일선택" disabled="disabled" class="file_text"
+                                    title="첨부파일 선택" />
+                                    <label for="file">찾아보기</label>
+                                    <input type="file" class="blind" id="file" title="첨부파일을 선택해주세요" />
+                                    <ul>
+                                        <li>&#x203B; pg,jpeg,gif,png,bmp,doc,docx,hwp,xls,xlsx,zip,pdf,ppt,pptx 형식만 지원
+                                        </li>
+                                        <li>&#x203B; 파일 사이즈 5MB까지 업로드 가능합니다.</li>
+                                        <li>&#x203B; 파일 첨부 시 개인정보에 주의하시기 바랍니다.</li>
+                                    </ul>
+                                </li>
+                                <!-- //첨부파일 -->
+                                <li class="mailing">
+                                    <p class="p_tit">뉴스레터 구독</p>
+                                    <div class="mailing_area">
+                                        <span class="mailing_agreebox">
+                                            <input type="radio" id="mailing1" name="mailing" title="뉴스레터를 구독하겠습니다" />
+                                            <label for="mailing1">동의</label>
+                                        </span>
+                                        <span class="mailing_agreebox">
+                                            <input type="radio" id="mailing0" name="mailing" title="뉴스레터를 구독하지 않겠습니다" />
+                                            <label for="mailing0">동의하지않음</label>
+                                        </span>
+                                    </div>
+                                        <p class="txt">&#x203B; 동의하신 회원님께 신제품 출시, 전시회 개최, 신기술 세미나 등 삼성전기의 소식을 정기적으로 보내드립니다.</p>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- //스텝2 -->
+                <!-- 개인정보 수집, 이용동의 -->
+                <h4>개인정보 수집, 이용동의</h4>
+                <div class="agree">
+                    <div class="agree_box">
+                        <!-- 1. 목적 -->
+                        <div class="purpose">
+                            <h5>1. 개인정보의 수집 및 이용 목적</h5>
+                            <p class="txt">문의 및 요청사항에 대한 서비스를 지원하기 위해 개인정보를 수집하고 있으며, 수집된 개인정보는 정해진 목적 이외의 용도로는 이용되지 않으며 수집 목적이 변경될
+                                경우
+                                사전에 알리고 동의를 받을 예정입니다.</p>
+                        </div>
+                        <!-- //1. 목적 -->
+                        <!-- 2. 기간 -->
+                        <div class="term">
+                            <h5>2. 개인정보의 보유 및 이용기간</h5>
+                            <p class="txt">원칙적으로 개인정보의 수집목적 또는 제공받은 목적이 달성된 때에는 귀하의 개인정보를 지체 없이 파기합니다. 다만 발송내역의 자료를 확인하기 위해 1년간
+                                보유합니다.
+                                다른 법령에 따라 보존하여야 하는 경우에는 보유 및 이용기간이 경과한 개인정보를 파기하지 아니하고 보유할 수 있습니다.</p>
+                        </div>
+                        <!-- //2. 기간 -->
+                        <!-- 3. 항목 -->
+                        <div class="Item">
+                            <h5>3. 수집하는 개인정보의 항목</h5>
+                            <!-- 필수항목 -->
+                            <div class="reqire">
+                                <dl>
+                                    <dt>[필수항목]</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>항목 : 국가, 이름, 이메일, 회사/조직</li>
+                                            <li>보유기간 : 1년간 보관 후 파기</li>
+                                            <li>보유목적 : 제품 관련 문의 및 요청사항에 대한 서비스 지원</li>
+                                            <li>자동수집항목 : IP, 쿠키(Cookie)</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <p class="notice">&#x203B; 귀하께서는 개인정보 수집 동의를 거부할 권리가 있으나 거부 시에는 요청하신 서비스가 제한될 수 있습니다.</p>
+                                <form action="/" method="POST">
+                                    <fieldset>
+                                        <legend class="blind">필수항목 동의여부</legend>
+                                        <p class="agree_bottom">상기 내용을 읽고 수집 및 이용에 동의합니다.</p>
+                                        <input type="radio" name="agree" id="agreeReq" />
+                                        <label for="agreeReq">동의</label>
+                                        <input type="radio" name="agree" id="disagreeReq" />
+                                        <label for="disagreeReq">동의안함</label>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <!-- //필수항목 -->
+                            <!-- 선택항목 -->
+                            <div class="option">
+                                <dl>
+                                    <dt>[선택항목]</dt>
+                                    <dd>
+                                        <ul>
+                                            <li>항목 : 부서, 전화번호</li>
+                                            <li>보유기간 : 1년간 보관 후 파기</li>
+                                            <li>보유목적 : 제품 관련 문의 및 요청사항에 대한 서비스 지원</li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <p class="notice">&#x203B; 귀하께서는 선택정보 동의를 거부하시더라도 서비스를 이용하실 수 있습니다.</p>
+                                <form action="/" method="POST">
+                                    <fieldset>
+                                        <legend class="blind">선택항목 동의여부</legend>
+                                        <p class="agree_bottom">상기 내용을 읽고 수집 및 이용에 동의합니다.</p>
+                                        <input type="radio" name="agree" id="agreeOpt" />
+                                        <label for="agreeOpt">동의</label>
+                                        <input type="radio" name="agree" id="disagreeOpt" />
+                                        <label for="disagreeOpt">동의안함</label>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <!-- //선택항목 -->
+                        </div>
+                        <!-- //3. 항목 -->
+                    </div>
+                </div>
+                <!-- //개인정보 수집, 이용동의 -->
+                <input class="finalOk" type="submit" value="접수하기">
+            </div>
+            <!-- //content -->
+        </div>
+        <!-- //컨테이너 -->
+
+        <!-- 푸터 -->
+        <? include "footer.html"; ?>
+        <!-- //푸터 -->
+
+        <div class="to_top on">
+            <a href="#" title="맨위로 올라가기">TOP</a>
+        </div>
+
+    </div>
+    <!-- //전체레이아웃 -->
+</body>
+
+</html>

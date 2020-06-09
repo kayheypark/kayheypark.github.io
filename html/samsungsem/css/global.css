@@ -1,0 +1,7 @@
+/* global.css */
+body {padding-top: 70px !important;}
+
+/*탑으로 버튼*/
+.to_top {transition: all 1s linear 0s;}
+.to_top.on {opacity: 0;}
+

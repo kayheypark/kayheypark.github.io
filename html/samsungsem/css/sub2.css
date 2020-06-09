@@ -1,0 +1,42 @@
+
+/* sub2.css */
+.spot .inner {background: url(../images/job_opening_visual_img.jpg) no-repeat 0 0;}
+
+
+/* common */
+
+h2 {font-size: 50px; font-weight: 550;}
+th {padding: 17px 10px;}
+td {padding: 16px 20px;}
+
+
+
+
+
+
+/* 컨테이너 */
+
+
+    /*컨텐트*/
+    .content {}
+    .content .inner {width: 1140px; margin: 0 auto;}
+    .content .inner p.info_txt {display: block; width: 1140px; text-align: right; font-size: 14px; margin: 15px 0 10px;}
+    /*채용공고 게시판*/
+    .content .inner table {
+        font-size: 16px;
+        width: 1140px;
+        border-top:  1px solid #000;
+        border-bottom:  1px solid #000;
+        text-align: center;}
+    .topbg {background: #F3F3F3; bolder; font-size: 17px; }
+    .topbg th {font-weight: bold; text-align: center;}
+    .title a {text-decoration: none; color: #333;}
+    tr td:first-child, .topbg th:first-child, .topbg th:nth-child(2), tr td:nth-child(2) {border-right: 1px solid #ccc;}
+    .content .inner table td {border-top: 1px solid #ccc;}
+
+    /*더보기 배너*/
+    .more_banner {width: 1080px; height: 47px; border: 1px solid #ccc; margin-top: 60px; padding: 20px 30px; font-size: 16px;}
+    .more_banner p {float: left; height: 45px; line-height: 45px; vertical-align: middle;}
+    .more_banner a {float: right; display: block; width: 160px; height: 45px; line-height: 45px; text-indent: 38px; background: #043285 url(../images/icon_btn_arrow_w.png) no-repeat 75% 17px; color: #fff; text-decoration: none;}
+
+

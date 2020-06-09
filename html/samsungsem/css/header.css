@@ -1,0 +1,196 @@
+/* header.css */
+
+/*헤더*/
+    /*로고*/
+    h1.logo {position: absolute; top: 17px; left: 30px;}
+    /*주메뉴*/
+        /*1단리스트*/
+        header {position: relative; width: 100%; height: 70px; background: #fff;}
+        .header_wrap {z-index: 30; position: absolute; left: 0; top: 0; width: 100%; height: 70px;
+                       border-bottom: 1px solid #999; background: #f3f3f3;}
+        .header_inner{width: 800px;margin: 0 auto}
+       
+
+
+        nav {position: relative; width: 100%;}
+        nav a {text-decoration: none; font-size: 15px; color: #000;}
+        nav > ul {padding-left: 51px; margin: 0 auto;}
+        nav > ul:after {content: ""; display: block; clear: both;}
+        nav > ul > li {text-align: center; line-height: 70px;}
+        nav > ul > li > a {font-weight: bold; font-size: 18px; color: #000; text-decoration: none;}
+        nav > ul > li > ul {display: none; position: absolute; left: 0px; top: 70px; width: 800px; padding: 5px;}
+        nav > ul > li:nth-of-type(2) > ul {width: 1000px;}
+        nav > ul > li:first-child > ul {left: 50px;}
+        nav > ul > li:nth-child(2) > ul {left: 50px;}
+        nav > ul > li:nth-child(3) > ul {left: 50px;}
+        nav > ul > li:nth-child(4) > ul {left: 50px;}
+        nav > ul > li:last-child > ul {left: 50px;}
+        .depth2_tit {float: left; display: block;  text-align: justify;}
+
+        .line1 { display: block; width: 1px; height: 230px; background: #ddd; position: absolute; left: 147px; top: 36px;}
+        .line2 { display: block; width: 1px; height: 230px; background: #ddd; position: absolute; right: 341px; top: 36px;}
+        
+        .depth2_tit > a {font-size: 16px; font-weight: bold; color: #1428a0; width: 100%;}
+        nav > ul > li:first-child .depth2_tit:nth-last-of-type(2) {padding:0 55px; margin: 0 55px; height: 250px;}
+        .depth2_list  li {line-height: 20px; text-align: justify; margin-top: 15px; }
+        .depth2_list > .depth2_area > li a {display: block; width: 88.28px;}
+        
+        .depth2_area > ul {}
+        li.left {margin-right: 70px; margin-top: -18px; float: left;}
+        li.right {float: right; margin-top: -18px;}
+
+       
+      
+       
+       nav >ul>li>a {position: relative; float: left; margin-right: 91px; display: inline-block; height: 70px;}
+       nav >ul>li:last-child>a {margin-right: 0px;}
+        nav > ul > li > a::after {content: ""; opacity: 0;
+                                   position: absolute; left: 50%; bottom: 0;
+                                   width: 0; height: 0; background: #1428a0;
+                                   transform: translate(-50%, 0);
+                                   transition: width .4s ease-in-out;
+       
+       }
+       
+        nav > ul > li.on > a::after {content: ""; opacity: 1; width: 100%; height: 3px;}
+       
+        .gnb_inner {position: absolute; width: 1000px; background-color: #ccc;}
+
+        /* 2. 인재채용*/
+        nav > ul > li:nth-of-type(2) {}
+        nav > ul > li:nth-of-type(2) > ul {}
+        nav > ul > li:nth-of-type(2) > ul > li.depth2_tit {margin-right: 55px; margin-left: 55px;}
+        nav > ul > li:nth-of-type(2) > ul > li.depth2_tit:first-of-type {margin-left: 0px;}
+        nav > ul > li:nth-of-type(2) > ul > li.depth2_tit:last-of-type {margin-right: 0px;}
+
+        .line_box22 {position: absolute; left: 165px;}
+        nav > ul > li:nth-of-type(2) .line:nth-of-type(1) {position: absolute; top: 35px; left: 0; display: block; width: 1px; height: 103px; background: #ddd;}
+        nav > ul > li:nth-of-type(2) .line:nth-of-type(2) {position: absolute; top: 35px; left: 170px; display: block; width: 1px; height: 103px; background: #ddd;}
+        nav > ul > li:nth-of-type(2) .line:nth-of-type(3) {position: absolute; top: 35px; left: 370px; display: block; width: 1px; height: 103px; background: #ddd;}
+        nav > ul > li:nth-of-type(2) .line:nth-of-type(4) {position: absolute; top: 35px; left: 540px; display: block; width: 1px; height: 103px; background: #ddd;}
+        
+        /* 3. 뉴스룸 */
+        nav > ul > li:nth-of-type(3) {}
+        nav > ul > li:nth-of-type(3) > ul {padding-left: 260px;}
+        nav > ul > li:nth-of-type(3) > ul > li.depth2_tit {margin-right: 55px; margin-left: 55px;}
+        nav > ul > li:nth-of-type(3) > ul > li.depth2_tit:first-of-type {margin-left: 0px;}
+        nav > ul > li:nth-of-type(3) > ul > li.depth2_tit:last-of-type {margin-right: 0px;}
+        
+        .line_box33 {position: absolute; left: 165px;}
+        nav > ul > li:nth-of-type(3) .line:nth-of-type(2) {position: absolute; top: -127px; left: 180px; display: block; width: 1px; height: 103px; background: #ddd;}
+        
+        /* 4. 제품정보 */
+        nav > ul > li:nth-of-type(4) {}
+        nav > ul > li:nth-of-type(4) > ul {height: 400px;}
+        nav > ul > li:nth-of-type(4) > ul > li.depth2_tit {margin-right: 65px; margin-left: 55px;}
+        nav > ul > li:nth-of-type(4) > ul > li.depth2_tit:first-of-type {margin-left: 0px;}
+        nav > ul > li:nth-of-type(4) > ul > li.depth2_tit:last-of-type {margin-right: 0px;}
+        
+        .line_box3 {position: absolute; left: 135px;}
+        nav > ul > li:nth-of-type(4) .line:nth-of-type(1) {position: absolute; top: 35px; left: 12px; display: block; width: 1px; height: 190px; background: #ddd;}
+        nav > ul > li:nth-of-type(4) .line:nth-of-type(2) {position: absolute; top: 35px; left: 228px; display: block; width: 1px; height: 190px; background: #ddd;}
+        nav > ul > li:nth-of-type(4) .line:nth-of-type(3) {position: absolute; top: 35px; left: 455px; display: block; width: 1px; height: 190px; background: #ddd;}
+
+        /* 더보기 박스 : Product Search & Component Library */
+       /* 공통 */
+        .moreBox {position: absolute; top: 263px;}
+        .moreBox a { display: block; background: #fff url(../images/btn_arrow_ico_l.png) no-repeat 95% 50%;
+                    box-sizing: border-box; width: 340px; height: 78px; padding: 17px 20px;
+                    border-radius: 7px;
+                    border: 1px solid #e2e2e2;}
+        .moreBox a strong {font-size: 18px; font-weight: 600; position: absolute; top: -10px; left: 17px; color:#000;}
+        .moreBox a p {position: absolute; left: 17px; color: #333; font-size: 14px;}
+
+        .moreBox1 {}
+        .moreBox1 a {}
+        .moreBox1 a strong {}
+        .moreBox1 a p {}
+
+        .moreBox2 {left: 385px;}
+        .moreBox2 a {}
+        .moreBox2 a strong {}
+        .moreBox2 a p {}
+        
+        
+        /* 5. 고객지원 */
+        nav > ul > li:nth-of-type(5) {}
+        nav > ul > li:nth-of-type(5) > ul {width: 1100px; margin-left: -150px;}
+        nav > ul > li:nth-of-type(5) > ul > li.depth2_tit {margin-right: 65px; margin-left: 55px;}
+        nav > ul > li:nth-of-type(5) > ul > li.depth2_tit:first-of-type {margin-left: 0px;}
+        nav > ul > li:nth-of-type(5) > ul > li.depth2_tit:last-of-type {margin-right: 0px;}
+
+        nav > ul > li:nth-of-type(5) > ul > li.depth2_tit:nth-of-type(5) {height: 40px;}
+        nav > ul > li:nth-of-type(5) > ul > li.depth2_tit:nth-of-type(6) {height: 40px;}
+        nav > ul > li:nth-of-type(5) > ul > li.depth2_tit:nth-of-type(7) {height: 40px;}
+        nav > ul > li:nth-of-type(5) > ul > li.depth2_tit:nth-of-type(8) {height: 40px;}
+        
+        .line_box4 {position: absolute; left: 135px;}
+        nav > ul > li:nth-of-type(5) .line:nth-of-type(1) {position: absolute; top: 35px; left: -5px; display: block; width: 1px; height: 130px; background: #ddd;}
+        nav > ul > li:nth-of-type(5) .line:nth-of-type(2) {position: absolute; top: 35px; left: 209px; display: block; width: 1px; height: 130px; background: #ddd;}
+        nav > ul > li:nth-of-type(5) .line:nth-of-type(3) {position: absolute; top: 35px; left: 422px; display: block; width: 1px; height: 130px; background: #ddd;}
+        nav > ul > li:nth-of-type(5) .line:nth-of-type(4) {position: absolute; top: 35px; left: 685px; display: block; width: 1px; height: 130px; background: #ddd;}
+
+
+
+
+
+/*3단리스트*/
+        
+    /* 탑메뉴 */
+    .topMenu_Area {position: absolute; top: 0;  right: 0px; width: 180px; height: 70px;}
+            .topMenu {position: relative;}
+            .topMenu dt {float: left;}
+            .topMenu dt a {display: block; width: 60px; height: 70px; font-size: 12px; line-height: 70px; text-align: center; text-decoration: none; font-weight: bold; color: #000;}
+            .topMenu dd {display: none; position: absolute; top: 69px; width: 60px; height: 188px; background: #fff; border-top: 5px solid #043285;}
+                
+                /*SNS*/
+                .topMenu dd ul li a {display: block; width: 30px; height: 30px; margin: 12px auto; border: 1px solid #ddd; border-radius: 15px; background: #ddd url(../images/utill_sns_ico.png) no-repeat -30px 0; text-indent: -9999px; overflow: hidden;}
+                .topMenu dd ul li:nth-child(2) a{background-position: -60px 0 ;}
+                .topMenu dd ul li:nth-child(3) a{background-position: -0px 0 ;}
+                .topMenu dd ul li:nth-child(4) a{background-position: -120px 0 ;}
+                
+                /*언어선택*/
+                .topMenu dd.lang { left: 60px; height: 154px; padding-top: 4px;}
+                .topMenu dd.lang ul {padding-top: 5px;}
+                .topMenu dd.lang ul li {}
+                .topMenu dd.lang ul li a {text-indent:0; background: none; border: none; border-radius: 0; margin-bottom: 12px;}
+                .topMenu dd.lang ul li a {text-decoration: none; font-size: 14px; color: #333;}
+
+                        .topMenu dt:first-child:hover + dd,
+                        .topMenu dt.lang:hover + dd.lang,
+                        #wrap .sns:hover,
+                        #wrap .lang:hover {display: block;}
+
+                /*검색버튼*/
+            .btn_srch {
+                
+                float: left; background: #043285 url(../images/btn_srch_ico.png) no-repeat 50% 50%;
+                width: 42px; height: 52px; padding-top: 18px; padding-left: 18px;
+             }
+            .btn_srch.on {z-index: 60;
+                background: #043285 url(../images/srch_pop_close.png) no-repeat 50% 50%;}
+
+            /* 검색새로운창 영역 */
+            .srch_wrap {display: none;
+                z-index: 60; position: absolute; width: 1920px; height: 260px; background:url(../images/srch_pop_bg.jpg) no-repeat 0 0; left: 50%; transform: translateX(-50%);}
+            .srch_inner {width: 660px; height: 100%; margin: 0 auto; box-sizing: border-box;}
+            .srch_inner fieldset {position: relative;}
+            .srch_inner input[type="search"] {width: 100%; height: 55px; box-sizing: border-box; padding-left: 15px; font-size: 16px; margin-top: 55px;}
+            .srch_inner button[type="submit"] {position: absolute; top: 60px; right: 5px; width: 45px; height: 45px; border-style: none; background:#333 url(../images/btn_srch_ico_l.png) no-repeat 50% 50%;}
+            .srch_inner .srch_line {margin: 20px 0 20px 0; width: 100%; height: 1px; background:#7fa6d3;}
+            .moreBtn_area {display: flex;}
+            .moreBtn_area a {display: inline-block;
+                font-size: 14px;
+                            background:#fff;
+                            height: 45px; line-height: 45px;
+                            text-decoration: none;
+                            color:#000;
+                            flex:1;
+                             margin: 0 0 0 10px;
+                             padding: 0 15px;
+                            text-align: center;
+                            border-radius: 12px;}
+
+            .moreBtn_area a:first-of-type {margin: 0;}
+
+            .dark_area.on {z-index: 2; position: fixed; height: 10000px; margin-top: -70px; width: 100%; background: rgba(0, 0, 0, 0.7);}
