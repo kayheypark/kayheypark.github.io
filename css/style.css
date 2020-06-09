@@ -1,3 +1,10 @@
 /* style.css */
 
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+/* *.css */
 @import url("reset.css");
+@import url("global.css");
+@import url("layout.css");
+@import url("main.css");
