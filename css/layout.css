@@ -4,16 +4,23 @@
 header {
     position: fixed;
     width: 100%;
-    font-size: 32px;
-    border: 1px solid red;
-}
-    .header_inner {width: 100%; padding: 30px; border: 1px solid red;}
-    .header_inner h1 {float: left;}
-    .sns_area {border: 1px solid red;}
-    .sns_area li {float: left;}
-    .btn_hamberger {border: 1px solid red;}
-    .gnb {border: 1px solid blue; position: absolute; top: -300px;}
+    }
+    .header_inner {
+        display: flex;
+        padding-top: 35px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .header_inner h1 {}
+    .header_inner h1 a {display: flex; margin-left: 50px; font-size: 0.9rem;}
+    .header_right_wrap {display: flex; margin-right: 50px;}
+    .sns_area {margin-right: 20px; margin-right: 80px;}
+    .sns_area li {float: left; margin-left: 35px;}
+    .btn_hamberger {}
 
-    .header_inner:after {content: ''; display: block; clear: both;}
+    .gnb {border: 1px solid blue; position: absolute; top: 0; left: 0; width: 100%; transform: translate3d(0,-100%,0);}
+    .indicator {position: absolute; top: 500px;}
+
+
 
 #containter {border: 1px solid red; padding-top: 500px;}

@@ -1,4 +1,4 @@
 /* global.css */
-
+html {font-size: 30px;}
 body {font-family: 'Nanum Gothic', sans-serif; color: #fff; letter-spacing: -0.5px;}
 a,a:hover {text-decoration: none; color: #fff;}
