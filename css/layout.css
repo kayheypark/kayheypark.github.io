@@ -5,6 +5,7 @@ header {
     position: fixed;
     width: 100%;
     }
+
     .header_inner {
         display: flex;
         padding-top: 35px;
@@ -12,15 +13,39 @@ header {
         width: 100%;
     }
     .header_inner h1 {}
-    .header_inner h1 a {display: flex; margin-left: 50px; font-size: 0.9rem;}
+    .header_inner h1 a {display: flex; margin-left: 50px; font-size: 0.9rem;
+                        transition: all 0.4s ease-in-out 0s;}
+    .header_inner h1 a:hover {opacity: 0.5;}
+
     .header_right_wrap {display: flex; margin-right: 50px;}
-    .sns_area {margin-right: 20px; margin-right: 80px;}
-    .sns_area li {float: left; margin-left: 35px;}
-    .btn_hamberger {}
-
-    .gnb {border: 1px solid blue; position: absolute; top: 0; left: 0; width: 100%; transform: translate3d(0,-100%,0);}
-    .indicator {position: absolute; top: 500px;}
-
+        .sns_area {margin-right: 20px; margin-right: 80px;}
+        .sns_area li {float: left; margin-left: 35px; transition: all 0.4s ease-in-out 0s;}
+        .sns_area li a{transition: all 0.4s ease-in-out 0s;}
+        .sns_area li a:hover {opacity: 0.5;}
+        .btn_hamberger {width: 24px; height: 24px;}
 
 
-#containter {border: 1px solid red; padding-top: 500px;}
+
+
+
+#containter {}
+#containter > section {
+    /* border: 5px solid red; */
+    width: 100%;
+    margin: 0 auto;
+}
+#containter > section > article {
+    /* border: 5px solid cyan; */
+    padding: 100px 30px 100px 210px;
+    height: calc(100vh);
+}
+
+#containter > section > article > h3 {font-size: 2.5rem; font-weight: bold;}
+#containter > section > article > .divLine {background: #fff; width: 200px; height: 010.86124676px;
+    border-radius: 50px;
+    margin: 100px 0;}
+#containter > section > article > .desc_area {}
+#containter > section > article > .desc_area > .desc {}
+#containter > section > article > .view_area {}
+#containter > section > article > .order {}
+        

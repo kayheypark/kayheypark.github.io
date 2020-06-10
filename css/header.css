@@ -1,0 +1,42 @@
+/* header.css */
+    .header_inner h1 {z-index: 100;}
+    .header_right_wrap {z-index: 100;}
+
+    .btn_hamberger {transition: all 0.4s ease-in-out 0s;}
+    .btn_hamberger:hover {opacity: 0.5;}
+
+    /* 상단에서 내려오는 .gnb */
+    .gnb {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background: #e52d27;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        font-size: 10vh;
+
+        width: 100%;
+        height: 100vh;
+
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        transform: translate3d(0,-100%,0);
+
+        -webkit-transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+        -moz-transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+        -o-transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+        transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955); /* easeInOutQuad */
+    }
+    .gnb.on {transform: translate3d(0,0,0);}
+
+    .gnb ul li {line-height: 1.6;}
+    .gnb ul li a {}
+    .gnb ul li a:hover {}
+
+    /* 왼쪽 인디케이터 */
+    .indicator {position: absolute; top: 500px; z-index: -1;}
