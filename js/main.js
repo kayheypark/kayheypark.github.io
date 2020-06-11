@@ -2,7 +2,7 @@
 
 $(function () {
     //a 누를때 자동스크롤 방지
-    $("a").click(function(e){
+    $(".btn_hamberger ,h1 a").click(function(e){
         e.preventDefault();
     });
 
