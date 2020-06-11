@@ -1,2 +1,155 @@
 /* home.css */
 
+section.home {}
+
+section.home .view_area {
+    overflow: hidden;
+    
+    position: absolute !important;
+    
+    top: 25% !important;
+    right: 1% !important; /*킥보드 영역만 right값이 다르게*/
+    transform: translateY(-25%) !important;
+    
+    width: 120vh !important;
+    height: 100vh !important;
+    
+    background-size: 50% !important;
+    
+}
+
+/*킥보드 본체*/
+section.home .kickboard {
+    z-index: 2;
+
+    position: absolute !important;
+
+    top: 25%;
+    transform: translateY(-25%) !important;
+
+    width: 120vh !important;
+    height: 100vh !important;
+    
+    background: url("../img/wire.png") no-repeat 30% 50% !important;
+    background-size: 50% !important;
+
+    animation: viv .5s linear infinite;
+
+}
+
+@keyframes viv {
+    0% {top: calc(25% - 0px);}
+    25% {top: calc(25% - 2px);}
+    25.001% {top: calc(25% - 0px);}
+    50% {top: calc(25% - 0px);}
+    75% {top: calc(25% + 0px);}
+    100% {top: calc(25% - 0px);}
+}
+
+/* 타이어_전륜 */
+.tire_1 {
+    position: absolute;
+    top: 568px;
+    left: 168px;
+
+    background: url("../img/tire.png") no-repeat 0 0;
+    width: 143px;
+    height: 143px;
+
+    transform: scale(0.9);
+
+    animation: rotate .4s infinite linear 0s;
+}
+
+/* 타이어_후륜 */
+.tire_2 {
+    position: absolute;
+    top: 568px;
+    left: 550px;
+
+    background: url("../img/tire.png") no-repeat 0 0;
+    width: 143px;
+    height: 143px;
+
+    transform: scale(0.9);
+
+    animation: rotate .4s infinite linear 0s;
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/* 이것은 .view_area(킥보드본체) > 의 하위입니다.*/
+.speeds {
+    position: absolute;
+
+    content: '';
+    display: block;
+    background: url("../img/speed_1.png") no-repeat 0 0;
+
+    transform: scale(1);
+
+    width: 1002px;
+    height: 383px;
+
+    animation: speed 1s linear infinite;
+}
+/* 구름(spped) */
+.speed_1  {
+    z-index: 1;
+
+    /* top: 10%; */
+    top: 40px;
+    left: -50%;
+
+    transform: scale(0.2);
+
+    animation-duration: 8s;
+    animation-delay: 0s;
+    background-image: url("../img/speed_small.png");
+    
+}
+
+.speed_2  {
+    z-index: -1;
+
+    /* top: 35%; */
+    top: 340px;
+    left: -100%;
+    
+    transform: scale(0.3);
+    
+    animation-duration: 5.5s;
+    animation-delay: 0s;
+    background-image: url("../img/speed_mid.png");
+    
+}
+
+.speed_3  {
+    z-index: 2;
+
+    /* top: 40%; */
+    top: 500px;
+    left: 0%;
+    
+    transform: scale(0.9);
+
+    animation-name: speed3;
+    animation-duration: 5s;
+    animation-delay: 0s;
+
+    background-image: url("../img/speed_1.png");
+
+}
+
+@keyframes speed {
+    0% {left: 100%; opacity: 1;}
+    100% {left: -120%; opacity: 1;}
+}
+@keyframes speed3 {
+    0% {left: 160%; opacity: 1;}
+    20% {opacity: 1;}
+    90%,100% {left: -500%;}
+}

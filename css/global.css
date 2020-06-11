@@ -1,5 +1,15 @@
 /* global.css */
-html {font-size: 30px;}
-body {font-family: 'Nanum Gothic', sans-serif; color: #fff; letter-spacing: -0.5px;
-    box-sizing: border-box;}
+html {font-size: 30px; /*rem*/}
+body {
+    /* font-family: 'Nanum Gothic', sans-serif; */
+    /* font-family: 'Sunflower', sans-serif; */
+    /* font-family: 'Noto Sans KR', sans-serif; Light, Medium, Black */
+    
+    font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+    color: #fff;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+    
+}
 a,a:hover {text-decoration: none; color: #fff;}
+p.desc {}

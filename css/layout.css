@@ -1,9 +1,13 @@
 /* layout.css */
 
-#wrap {background-color: rgb(39, 39, 66);}
+#wrap {
+    /* background-color: rgb(56, 185, 157); */
+    background-color: #2ac1bc;
+}
 header {
     position: fixed;
     width: 100%;
+    z-index: 50;
     }
 
     .header_inner {
@@ -13,16 +17,16 @@ header {
         width: 100%;
     }
     .header_inner h1 {}
-    .header_inner h1 a {display: flex; margin-left: 50px; font-size: 0.9rem;
+    .header_inner h1 a {display: flex; margin-left: 50px; font-size: 1.9rem;
                         transition: all 0.4s ease-in-out 0s;}
-    .header_inner h1 a:hover {opacity: 0.5;}
+    .header_inner h1 a:hover {transform: rotateZ(90deg);}
 
     .header_right_wrap {display: flex; margin-right: 50px;}
         .sns_area {margin-right: 20px; margin-right: 80px;}
         .sns_area li {float: left; margin-left: 35px; transition: all 0.4s ease-in-out 0s;}
         .sns_area li a{transition: all 0.4s ease-in-out 0s;}
         .sns_area li a:hover {opacity: 0.5;}
-        .btn_hamberger {width: 24px; height: 24px;}
+        .btn_hamberger {width: 24px; height: 24px; z-index: 1000;}
 
 
 
@@ -36,16 +40,22 @@ header {
 }
 #containter > section > article {
     /* border: 5px solid cyan; */
-    padding: 100px 30px 100px 210px;
+    position: relative;
+    box-sizing: border-box;
     height: calc(100vh);
+    overflow: hidden;
 }
 
-#containter > section > article > h3 {font-size: 2.5rem; font-weight: bold;}
-#containter > section > article > .divLine {background: #fff; width: 200px; height: 010.86124676px;
-    border-radius: 50px;
-    margin: 100px 0;}
-#containter > section > article > .desc_area {}
-#containter > section > article > .desc_area > .desc {}
-#containter > section > article > .view_area {}
-#containter > section > article > .order {}
+.text_wrap {margin-left: 12%; position: absolute; top: 50%; transform: translateY(-50%);}
+.text_wrap > h3 {font-size: 3.0rem; font-weight: medium;}
+.text_wrap > .divLine {
+                        background: url("../img/line_mid_2.png") no-repeat 0 0;
+    
+                        width: 331px; height: 042.01086124676px;
+                        margin: 40px 0;}
+.text_wrap > .desc_area {}
+.text_wrap > .desc_area > .desc {}
+.view_area {position: relative; margin: 0 2% 0 auto; top: 300px;}
+
+.view_area > .order {position: absolute; bottom: 50px; right: 50px;}
         

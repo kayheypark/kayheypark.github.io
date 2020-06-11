@@ -1,0 +1,13 @@
+/* indicator.css */
+
+
+/* 왼쪽 인디케이터 */
+.indicator {border: 1px solid red; z-index: 20;
+    position: fixed; 
+    top: 50%; left: 50px;
+    width: 100px; 
+    transform: translateY(-50%);}
+.indicator ul {}
+.indicator ul li {}
+.indicator ul li a {margin-bottom: 50px; display: block; width: 24px; height: 8px; background-color: #fff;}
+.indicator ul li:last-of-type a{margin: 0;}

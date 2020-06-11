@@ -24,6 +24,30 @@ $(function () {
 
     });
 
+
+    //메인_킥보드
+    $("section").mousemove(function(e){
+        var posX = e.pageX;      // 마우스 커서의 x축 좌표값
+        var posY = e.pageY;     // 마우스 커서의 Y축 좌표값
+        console.log(posX);
+
+        //+반대방향, -같은방향
+        //.obj11 { right: 20px; bottom: 20px;}
+        $(".speed_1").css({
+            "top": 40 - (posY/80),
+        });
+        $(".speed_2").css({
+            "top": 340 + (posY/20),
+        });
+        $(".speed_3").css({
+            "top": 500 - (posY/5),
+        });
+    });
+
+
+    //원스크롤
+
+
     
 }); // DocReady Close
 
