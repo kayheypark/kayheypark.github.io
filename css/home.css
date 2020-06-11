@@ -46,37 +46,27 @@ section.home .kickboard {
     100% {top: calc(25% - 0px);}
 }
 
-/* 타이어_전륜 */
-.tire_1 {
+/* 타이어 공통 */
+.tires {
     position: absolute;
     top: 568px;
-    left: 168px;
-
-    background: url("../img/tire.png") no-repeat 0 0;
     width: 143px;
     height: 143px;
+    
+    background: url("../img/tire.png") no-repeat 0 0;
 
     transform: scale(0.9);
 
-    animation: rotate .4s infinite linear 0s;
+    animation: wheel .4s infinite linear 0s;
 }
+
+/* 타이어_전륜 */
+.tire_1 {left: 168px;}
 
 /* 타이어_후륜 */
-.tire_2 {
-    position: absolute;
-    top: 568px;
-    left: 550px;
+.tire_2 {left: 550px;}
 
-    background: url("../img/tire.png") no-repeat 0 0;
-    width: 143px;
-    height: 143px;
-
-    transform: scale(0.9);
-
-    animation: rotate .4s infinite linear 0s;
-}
-
-@keyframes rotate {
+@keyframes wheel {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
@@ -96,11 +86,11 @@ section.home .kickboard {
 
     animation: speed 1s linear infinite;
 }
-/* 구름(spped) */
+/* 구름(speed) 공통 */
 .speed_1  {
     z-index: 1;
 
-    /* top: 10%; */
+    /* top: 10%; js 모션 넣은 후로 아래처럼 px로 바꿔주었다. js에서는 %를 인지 못하는 듯 */
     top: 40px;
     left: -50%;
 
