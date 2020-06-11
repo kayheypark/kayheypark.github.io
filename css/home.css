@@ -28,7 +28,7 @@ section.home .kickboard {
 
 
     top: 25%;
-    transform: translateY(-0%) !important;
+    transform: translateY(-0%);
 
     width: 120vh !important;
     height: 100vh !important;
@@ -41,12 +41,12 @@ section.home .kickboard {
 }
 
 @keyframes viv {
-    0% {top: calc(25% - 0px);}
-    25% {top: calc(25% - 2px);}
-    25.001% {top: calc(25% - 0px);}
-    50% {top: calc(25% - 0px);}
-    75% {top: calc(25% + 0px);}
-    100% {top: calc(25% - 0px);}
+    0% {transform: translateY(0%);}
+    25% {transform: translateY(-0.9%)}
+    25.001% {transform: translateY(-0.9%);}
+    50% {transform: translateY(0%);}
+    75% {transform: translateY(0%)}
+    100% {transform: translateY(0%);}
 }
 
 /* 타이어 공통 */
