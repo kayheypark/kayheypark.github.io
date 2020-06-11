@@ -14,18 +14,21 @@ section.home .view_area {
     width: 120vh !important;
     height: 100vh !important;
     
-    background-size: 50% !important;
     
+}
+
+.kickboard_area {
+    z-index: 2;
+    position: absolute;
+    top: 5%;
 }
 
 /*킥보드 본체*/
 section.home .kickboard {
-    z-index: 2;
 
-    position: absolute !important;
 
     top: 25%;
-    transform: translateY(-25%) !important;
+    transform: translateY(-0%) !important;
 
     width: 120vh !important;
     height: 100vh !important;
@@ -48,23 +51,25 @@ section.home .kickboard {
 
 /* 타이어 공통 */
 .tires {
-    position: absolute;
-    top: 568px;
-    width: 143px;
-    height: 143px;
+    z-index: -1;
+    position: absolute ;
+    top: 60%;
+    width: 16vh;
+    height: 16vh;
     
     background: url("../img/tire.png") no-repeat 0 0;
+    background-size: 100.555% !important;
 
-    transform: scale(0.9);
+    transform: scale(0.9) !important;
 
     animation: wheel .4s infinite linear 0s;
 }
 
 /* 타이어_전륜 */
-.tire_1 {left: 168px;}
+.tire_1 {left: 14.5%;}
 
 /* 타이어_후륜 */
-.tire_2 {left: 550px;}
+.tire_2 {left: 49%;}
 
 @keyframes wheel {
     0% {transform: rotate(0deg);}

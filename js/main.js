@@ -30,7 +30,7 @@ $(function () {
         var posX = e.pageX;      // 마우스 커서의 x축 좌표값
         var posY = e.pageY;     // 마우스 커서의 Y축 좌표값
         console.log(posX);
-
+        
         //+반대방향, -같은방향
         //.obj11 { right: 20px; bottom: 20px;}
         $(".speed_1").css({
@@ -42,6 +42,11 @@ $(function () {
         $(".speed_3").css({
             "top": 500 - (posY/5),
         });
+        $(".kickboard_area").css({
+            "left": -10 + (posX/15),
+            "top": 20 + (posY/40)
+        });
+        console.log("성공");
     });
 
 
