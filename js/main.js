@@ -2,7 +2,7 @@
 
 $(function () {
     //a 누를때 자동스크롤 방지
-    $(".btn_hamberger ,h1 a").click(function(e){
+    $(".btn_hamberger ,h1 a, .indicator a").click(function(e){
         e.preventDefault();
     });
 
@@ -29,28 +29,60 @@ $(function () {
     $("section").mousemove(function(e){
         var posX = e.pageX;      // 마우스 커서의 x축 좌표값
         var posY = e.pageY;     // 마우스 커서의 Y축 좌표값
-        console.log(posX);
+
         
         //+반대방향, -같은방향
         //.obj11 { right: 20px; bottom: 20px;}
         $(".speed_1").css({
-            "top": 40 - (posY/80),
+            "top": 140 - (posY/5),
         });
         $(".speed_2").css({
-            "top": 340 + (posY/20),
+            "top": 340 + (posY/5),
         });
         $(".speed_3").css({
-            "top": 500 - (posY/5),
+            "top": 1000 - (posY/1),
         });
         $(".kickboard_area").css({
-            "left": -10 + (posX/15),
-            "top": 20 + (posY/40)
+            "left": -350 + (posX/3),
+            "top": -200 + (posY/2)
         });
-        console.log("성공");
     });
 
 
     //원스크롤
+    //mousewheel
+    
+    
+    $("#containter section").mousewheel(function(event, delta){
+        event.preventDefault();
+
+        if(delta>0){
+            //마우스 휠을 올렸을 때, 양수값
+            var prev = $(this).prev().offset().top;
+            $("html,body").stop().animate({"scrollTop":prev},1000,"swing");
+        } else if(delta<0){
+            // 마우스 휠 내렸을때, 음수값
+            var next = $(this).next().offset().top;
+            $("html,body").stop().animate({"scrollTop":next},1000,"swing");
+        }        
+    });
+
+    $(".works_coding article, .works_design article").mousewheel(function(event, delta){
+        event.preventDefault();
+
+        if(delta>0){
+            //마우스 휠을 올렸을 때, 양수값
+            var prev = $(this).prev().offset().top;
+            $("html,body").stop().animate({"scrollTop":prev},1000,"swing");
+        } else if(delta<0){
+            // 마우스 휠 내렸을때, 음수값
+            var next = $(this).next().offset().top;
+            $("html,body").stop().animate({"scrollTop":next},1000,"swing");
+        }        
+    });
+
+    
+
 
 
     

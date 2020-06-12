@@ -39,7 +39,7 @@ header {
     margin: 0 auto;
 }
 #containter > section > article {
-    /* border: 5px solid cyan; */
+    /* border: 1px solid cyan; */
     position: relative;
     box-sizing: border-box;
     height: calc(100vh);
@@ -55,7 +55,29 @@ header {
                         margin: 40px 0;}
 .text_wrap > .desc_area {}
 .text_wrap > .desc_area > .desc {}
-.view_area {position: relative; margin: 0 2% 0 auto; top: 300px;}
 
-.view_area > .order {position: absolute; bottom: 50px; right: 50px;}
+.view_area {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+
+    transform: translateY(-50%);
+
+    width: 50%;
+    height: 70%;
+
+    margin: 0 2% 0 auto;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    box-sizing: border-box;
+}
+
+.view_area > .order {
+    position: absolute;
+    bottom: 2%;
+    right: -10%;
+
+    font-size: 5rem;
+}
         

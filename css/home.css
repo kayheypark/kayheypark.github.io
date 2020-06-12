@@ -4,6 +4,8 @@
 section.home {}
 
 section.home .view_area {
+    border: none;
+    border-left: 10px dashed rgba(255, 255, 255, 0.6);
     overflow: hidden;
     
     position: absolute !important;
@@ -14,6 +16,9 @@ section.home .view_area {
     
     width: 120vh !important;
     height: 100vh !important;
+
+    
+    
     
     
 }
@@ -22,6 +27,11 @@ section.home .view_area {
     z-index: 2;
     position: absolute;
     top: 5%;
+    -webkit-transition: all 2500ms cubic-bezier(0.035, 0.350, 0.165, 0.925);
+    -moz-transition: all 2500ms cubic-bezier(0.035, 0.350, 0.165, 0.925);
+      -o-transition: all 2500ms cubic-bezier(0.035, 0.350, 0.165, 0.925);
+         transition: all 2500ms cubic-bezier(0.035, 0.350, 0.165, 0.925); /* custom */
+    
 }
 
 /*킥보드 본체*/
@@ -85,12 +95,16 @@ section.home .kickboard {
     display: block;
     background: url("../img/speed_1.png") no-repeat 0 0;
 
-    transform: scale(1);
 
     width: 1002px;
     height: 383px;
 
     animation: speed 1s linear infinite;
+
+    -webkit-transition: all 5000ms cubic-bezier(0.035, 0.350, 0.165, 0.925);
+    -moz-transition: all 5000ms cubic-bezier(0.035, 0.350, 0.165, 0.925);
+      -o-transition: all 5000ms cubic-bezier(0.035, 0.350, 0.165, 0.925);
+         transition: all 5000ms cubic-bezier(0.035, 0.350, 0.165, 0.925); /* custom */
 }
 /* 구름(speed) 공통 */
 .speed_1  {
