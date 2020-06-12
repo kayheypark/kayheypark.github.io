@@ -51,9 +51,7 @@ $(function () {
 
     //원스크롤
     //mousewheel
-    
-    
-    $("#containter section").mousewheel(function(event, delta){
+    $("section").mousewheel(function(event, delta){
         event.preventDefault();
 
         if(delta>0){
@@ -67,18 +65,41 @@ $(function () {
         }        
     });
 
-    $(".works_coding article, .works_design article").mousewheel(function(event, delta){
-        event.preventDefault();
 
-        if(delta>0){
-            //마우스 휠을 올렸을 때, 양수값
-            var prev = $(this).prev().offset().top;
-            $("html,body").stop().animate({"scrollTop":prev},1000,"swing");
-        } else if(delta<0){
-            // 마우스 휠 내렸을때, 음수값
-            var next = $(this).next().offset().top;
-            $("html,body").stop().animate({"scrollTop":next},1000,"swing");
-        }        
+    
+    //섹션별 색상다름 설정
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        console.log(scrollTop);
+
+        if(scrollTop<=1){
+            $("#wrap").removeClass("color1");
+            $("#wrap").removeClass("color2");
+            $("#wrap").removeClass("color3");
+            $("#wrap").removeClass("color4");
+
+        }else if(scrollTop <= 937){
+            $("#wrap").removeClass("color2");
+            $("#wrap").removeClass("color3");
+            $("#wrap").removeClass("color4");
+            $("#wrap").addClass("color1");
+        } else if (scrollTop <= (937*2)) {
+            $("#wrap").removeClass("color1");
+            $("#wrap").removeClass("color3");
+            $("#wrap").removeClass("color4");
+            $("#wrap").addClass("color2");
+        } else if (scrollTop <= (937*3)) {
+            $("#wrap").removeClass("color1");
+            $("#wrap").removeClass("color2");
+            $("#wrap").removeClass("color4");
+            $("#wrap").addClass("color3");
+        } else {
+            $("#wrap").removeClass("color1");
+            $("#wrap").removeClass("color2");
+            $("#wrap").removeClass("color3");
+            $("#wrap").addClass("color4");
+        }
+        
     });
 
     
