@@ -8,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
@@ -72,7 +73,7 @@
         <div id="containter">
 
             <!-- 1. home -->
-            <section class="home">
+            <section class="home" id="section1">
             <h2 class="blind">home</h2>
             <article class="main">
                 <div class="text_wrap">
@@ -85,7 +86,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="view_area">
+                <div class="view_area" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
                     <div class="kickboard_area">
                         <div class="kickboard"></div>
                         <div class="tire_1 tires"></div>
@@ -100,7 +101,7 @@
             </section>
 
             <!-- 2. skills -->
-            <section class="skills">
+            <section class="skills" id="section2">
             <h2 class="blind">skills</h2>
                 <article class="skills_can">
                     <div class="text_wrap">
@@ -134,7 +135,7 @@
             <!-- //2. skills -->
             
             <!-- 3. works_coding -->
-            <section class="works_coding">
+            <section class="works_coding" id="section3">
                 <h2 class="blind">works_coding</h2>
                 <!-- 3-1. 삼성전기 -->
                 <article class="samsung">
@@ -187,7 +188,7 @@
             <!-- //3. works_coding -->
             
             <!-- 4. works_design -->
-            <section class="works_design">
+            <section class="works_design" id="section4">
                 <h2 class="blind">works_design</h2>
                 <!-- 4-1. 앱디자인 -->
                 <article class="appDsg">

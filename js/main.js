@@ -6,6 +6,9 @@ $(function () {
         e.preventDefault();
     });
 
+
+
+
     //상단에서 내려오는 .gnb
     var flag = false;
     $(".btn_hamberger").click(function(){
@@ -48,12 +51,27 @@ $(function () {
         });
     });
 
+    //킥보드에 마우스 홀딩시 부스터
+    $("#section1 .view_area").mousedown(function(){
+        $(".kickboard_area").removeClass("on");
+        $(".kickboard_area").addClass("on");
+
+        $(".speed_1").addClass("on");
+        $(".speed_2").addClass("on");
+        $(".speed_3").addClass("on");
+    });
+    $("body").mouseup(function(){
+        $(".kickboard_area").removeClass("on");
+        $(".speed_1").removeClass("on");
+        $(".speed_2").removeClass("on");
+        $(".speed_3").removeClass("on");
+    });
+
 
     //원스크롤
     //mousewheel
-    $("section").mousewheel(function(event, delta){
+    $("section").bind("mousewheel scroll", function(event, delta){
         event.preventDefault();
-
         if(delta>0){
             //마우스 휠을 올렸을 때, 양수값
             var prev = $(this).prev().offset().top;
@@ -65,12 +83,39 @@ $(function () {
         }        
     });
 
+    //모바일에서 터치로 섹션 내려기
+   /* $("section").bind("swipeleft",function(delta){
+        console.log("2222");
+        delta=1;
+        $("section").trigger("mousewheel");
+    });
+    $("section").bind("swiperight",function(delta){
+        console.log("22");
+        delta=-1;
+        $("section").trigger("mousewheel");
+    }); */
+
+    
+    
+
+
+    //좌측 인디케이터
+    function IdcMove(seq){
+        var offset = $("#section" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 1000, "swing");
+    }
+
+    $(".indicator ul li:nth-of-type(1) a").click(function(){IdcMove('1')});
+    $(".indicator ul li:nth-of-type(2) a").click(function(){IdcMove('2')});
+    $(".indicator ul li:nth-of-type(3) a").click(function(){IdcMove('3')});
+    $(".indicator ul li:nth-of-type(4) a").click(function(){IdcMove('4')});
+
 
     
     //섹션별 색상다름 설정
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
-        console.log(scrollTop);
+        //console.log(scrollTop);
 
         if(scrollTop<=1){
             $("#wrap").removeClass("color1");
