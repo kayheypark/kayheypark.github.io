@@ -1,0 +1,18 @@
+/* loading.css */
+
+/* 로딩페이지 */
+.progress {z-index: 9999; background-color: #333; color: #333;
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+
+.progress-bar {position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+        box-sizing: border-box;
+        height: 24px;
+        width: 0%; 
+        background: #fff;
+        border-radius: 50px;
+}
+.progress-text {position: absolute; top: 50%; transform: translateY(-50%); width: 100%;
+        font-family: "Josefin Sans"; font-size: 22px; text-align: center;}
+        
+.progress-complete .progress-bar {background: #DE0000;}
+.progress-complete {color: #fff;}
