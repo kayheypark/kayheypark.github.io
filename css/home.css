@@ -5,6 +5,7 @@ section.home {}
 
 section.home .view_area {
     border: none;
+    border-left: 10px dashed rgba(255, 255, 255, 0.6);
     overflow: hidden;
     
     position: absolute !important;

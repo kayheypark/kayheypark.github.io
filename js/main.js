@@ -1,66 +1,17 @@
 /* main.js */
 
 $(function () {
-    //로딩페이지
-    function imagesProgress(){
-        var $container = $('#progress'), // div
-            $progressBar = $container.find('.progress-bar'), // span
-            $progressText = $container.find('.progress-text'), // span
-
-            imgLoad = imagesLoaded('body'),
-            imgTotal = imgLoad.images.length, // body 전체 이미지 수를 저장
-
-            
-            imgLoaded = 0, // 이미지 로딩한 숫자
-            current = 0, // text에 들어갈 숫자
-            
-            progressTimer = setInterval(updateProgress, 1000 / 60);
-            console.log("imgTotal : " + imgTotal);
-
-            imgLoad.on('progress', function(){
-                imgLoaded++;
-            });
-
-            function updateProgress(){
-                var target = (imgLoaded / imgTotal) * 100;
-                    current += (target - current) * 0.1;
-
-                    $progressBar.css({width:current+'%'});
-                    $progressText.text(Math.floor(current)+'%');
-
-                    if(current >= 100){
-                        clearInterval(progressTimer);
-                        $container.addClass('progress-complete');
-
-                        $progressBar.add($progressText).delay(800).animate({opacity:0},250,function(){
-                            $container.animate({top:'-100%'}, 500, "swing");
-
-                        });
-                    }
-                    if(current>99.9){
-                        current = 100;
-                    }
-
-            }; //updateProgress()
-    }//imagesProgress()
-    imagesProgress();
-
-
     //a 누를때 자동스크롤 방지
     $(".btn_hamberger ,h1 a, .indicator a").click(function(e){
         e.preventDefault();
     });
 
-    //새로고침 TOP효과
-    setTimeout (function(){
-        scrollTo(0,0);
-    },100);
 
 
 
     //상단에서 내려오는 .gnb
     var flag = false;
-    $(".btn_hamberger").click(function (){
+    $(".btn_hamberger").click(function(){
 
         if(flag == 0){//열음
             $("#gnb").addClass("on");
@@ -117,9 +68,6 @@ $(function () {
     });
 
 
-
-
-
     //원스크롤
     //mousewheel
     $("section").bind("mousewheel scroll", function(event, delta){
@@ -152,81 +100,16 @@ $(function () {
 
 
     //좌측 인디케이터
-     //클릭시 섹션이동
     function IdcMove(seq){
         var offset = $("#section" + seq).offset();
-        $('html, body').stop().animate({scrollTop : offset.top}, 1000, "swing");
-        $("#gnb").removeClass("on");
+        $('html, body').animate({scrollTop : offset.top}, 1000, "swing");
     }
-    
+
     $(".indicator ul li:nth-of-type(1) a").click(function(){IdcMove('1')});
     $(".indicator ul li:nth-of-type(2) a").click(function(){IdcMove('2')});
     $(".indicator ul li:nth-of-type(3) a").click(function(){IdcMove('3')});
     $(".indicator ul li:nth-of-type(4) a").click(function(){IdcMove('4')});
-    $(".indicator ul li:nth-of-type(5) a").click(function(){IdcMove('5')});
-    
-        //로고 클릭시 (TOP 으로)
-    $("h1 a").click(function(){IdcMove('1')});
 
-        //오프셋 탑값에 따라 자동으로 on 클래스 붙이기
-        setInterval(function(){
-            var secOffset1 = $("#section1").offset(),
-                secOffset2 = $("#section2").offset(),
-                secOffset3 = $("#section3").offset(),
-                secOffset4 = $("#section4").offset(),
-                secOffset5 = $("#section5").offset(),
-                scrollTop = $(window).scrollTop();
-
-            $(".indicator ul li a").removeClass("on"); //주기적으로 삭제
-
-            if(scrollTop <= secOffset1.top){
-                $(".indicator ul li:nth-of-type(1) a").addClass("on");
-            } else if(scrollTop <= secOffset2.top) {
-                $(".indicator ul li:nth-of-type(2) a").addClass("on");
-            } else if(scrollTop <= secOffset3.top) {
-                $(".indicator ul li:nth-of-type(3) a").addClass("on");
-            } else if(scrollTop <= secOffset4.top) {
-                $(".indicator ul li:nth-of-type(4) a").addClass("on");
-            } else if(scrollTop <= secOffset5.top) {
-                $(".indicator ul li:nth-of-type(5) a").addClass("on");
-            }
-        },400);
-
-
-    //GNB
-    function gnbLstClk(){ // 리스트 클릭시 버튼 모양을 바꿔준다.
-
-            if(flag == 0){//열음
-            $(".btn_hamberger i").removeClass("fas fa-bars");
-            $(".btn_hamberger i").addClass("fas fa-times");
-            flag = true;
-        } else {//닫음
-            $(".btn_hamberger i").removeClass("fas fa-times");
-            $(".btn_hamberger i").addClass("fas fa-bars");
-            flag = false;
-        }
-
-    }
-
-    $("#gnb ul li:nth-of-type(1) a").click(function(){
-        IdcMove('1');
-        gnbLstClk();
-        });
-    $("#gnb ul li:nth-of-type(2) a").click(function(){
-        IdcMove('3');
-        gnbLstClk();
-        });
-    $("#gnb ul li:nth-of-type(3) a").click(function(){
-        IdcMove('4');
-        gnbLstClk();
-        });
-    $("#gnb ul li:nth-of-type(4) a").click(function(){
-        IdcMove('5');
-        gnbLstClk();
-        });
-
-    
-    
 
     
     //섹션별 색상다름 설정
@@ -265,17 +148,10 @@ $(function () {
     });
 
     
-   
-    //스크롤탑 표시
-    /*
-    setInterval(function(){
-        var scrollTop = $(window).scrollTop();
-        $("h1 a span").html(scrollTop);
-
-    }, 10);
-    */
 
 
 
     
 }); // DocReady Close
+
+//<i class="fas fa-times"></i>

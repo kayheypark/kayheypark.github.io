@@ -11,9 +11,5 @@
     transform: translateY(-50%);}
 .indicator ul {}
 .indicator ul li {}
-.indicator ul li a {margin-bottom: 50px; display: block; width: 34px; height: 12px; background-color: #fff;
-                    border-radius: 12px;
-                    transition: all 0.4s ease-in-out 0s;}
+.indicator ul li a {margin-bottom: 50px; display: block; width: 24px; height: 8px; background-color: #fff;}
 .indicator ul li:last-of-type a{margin: 0;}
-
-.indicator ul li a.on  {width: 65px;}

@@ -9,8 +9,6 @@ body {
     color: #fff;
     letter-spacing: -0.5px;
     box-sizing: border-box;
-
-    overflow: hidden;
     
 }
 a,a:hover {text-decoration: none; color: #fff;}
