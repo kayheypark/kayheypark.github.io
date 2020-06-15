@@ -1,1 +1,14 @@
 /* skills.css */
+
+/* skills */
+
+section.skills {}
+section.skills .view_area {}
+section.skills table { width: 100%; height: 100%; transform: translateY(25%);}
+section.skills table tbody {}
+section.skills table tr { padding: 0% 0;}
+section.skills table td { padding: 10% 0;}
+
+/* .graph_Cdg td{padding-top: 0 !important;}
+.graph_Cdg2 td{}
+.graph_Dsg td{padding-bottom: 0 !important;} */
