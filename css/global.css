@@ -9,9 +9,22 @@ body {
     color: #fff;
     letter-spacing: -0.5px;
     box-sizing: border-box;
-
+    /* 스크롤바 삭제 */
     overflow: hidden;
+
     
 }
 a,a:hover {text-decoration: none; color: #fff;}
-p.desc {}
+p.desc {font-weight: 400; font-size: 0.9rem;}
+
+.btn_more {
+    display: inline-block;
+
+    border-radius: 15px;
+    padding: 12px 20px;
+    background: #3a9b22;
+
+    transition: all 0.7s ease-in-out 0s;
+}
+
+.btn_more:hover {box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);}

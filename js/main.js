@@ -47,7 +47,7 @@ $(function () {
 
 
     //a 누를때 자동스크롤 방지
-    $(".btn_hamberger ,h1 a, .indicator a").click(function(e){
+    $(".btn_hamberger ,h1 a, .indicator a, .arrow a").click(function(e){
         e.preventDefault();
     });
 
@@ -159,11 +159,11 @@ $(function () {
         $("#gnb").removeClass("on");
     }
     
-    $(".indicator ul li:nth-of-type(1) a").click(function(){IdcMove('1')});
-    $(".indicator ul li:nth-of-type(2) a").click(function(){IdcMove('2')});
-    $(".indicator ul li:nth-of-type(3) a").click(function(){IdcMove('3')});
-    $(".indicator ul li:nth-of-type(4) a").click(function(){IdcMove('4')});
-    $(".indicator ul li:nth-of-type(5) a").click(function(){IdcMove('5')});
+    $(".indicator ul li:nth-of-type(1) a").click(function(){IdcMove('1');$(".indicator ul li a").removeClass("on");});
+    $(".indicator ul li:nth-of-type(2) a").click(function(){IdcMove('2');$(".indicator ul li a").removeClass("on");});
+    $(".indicator ul li:nth-of-type(3) a").click(function(){IdcMove('3');$(".indicator ul li a").removeClass("on");});
+    $(".indicator ul li:nth-of-type(4) a").click(function(){IdcMove('4');$(".indicator ul li a").removeClass("on");});
+    $(".indicator ul li:nth-of-type(5) a").click(function(){IdcMove('5');$(".indicator ul li a").removeClass("on");});
     
         //로고 클릭시 (TOP 으로)
     $("h1 a").click(function(){IdcMove('1')});
@@ -177,19 +177,23 @@ $(function () {
                 secOffset5 = $("#section5").offset(),
                 scrollTop = $(window).scrollTop();
 
-            $(".indicator ul li a").removeClass("on"); //주기적으로 삭제
-
-            if(scrollTop <= secOffset1.top){
-                $(".indicator ul li:nth-of-type(1) a").addClass("on");
-            } else if(scrollTop <= secOffset2.top) {
-                $(".indicator ul li:nth-of-type(2) a").addClass("on");
-            } else if(scrollTop <= secOffset3.top) {
-                $(".indicator ul li:nth-of-type(3) a").addClass("on");
-            } else if(scrollTop <= secOffset4.top) {
-                $(".indicator ul li:nth-of-type(4) a").addClass("on");
-            } else if(scrollTop <= secOffset5.top) {
-                $(".indicator ul li:nth-of-type(5) a").addClass("on");
-            }
+                
+                if(scrollTop == secOffset1.top){
+                    $(".indicator ul li a").removeClass("on"); //주기적으로 삭제
+                    $(".indicator ul li:nth-of-type(1) a").addClass("on");
+                } else if(scrollTop == secOffset2.top) {
+                    $(".indicator ul li a").removeClass("on"); //주기적으로 삭제
+                    $(".indicator ul li:nth-of-type(2) a").addClass("on");
+                } else if(scrollTop == secOffset3.top) {
+                    $(".indicator ul li a").removeClass("on"); //주기적으로 삭제
+                    $(".indicator ul li:nth-of-type(3) a").addClass("on");
+                } else if(scrollTop == secOffset4.top) {
+                    $(".indicator ul li a").removeClass("on"); //주기적으로 삭제
+                    $(".indicator ul li:nth-of-type(4) a").addClass("on");
+                } else if(scrollTop == secOffset5.top) {
+                    $(".indicator ul li a").removeClass("on"); //주기적으로 삭제
+                    $(".indicator ul li:nth-of-type(5) a").addClass("on");
+                }
         },400);
 
 
@@ -231,31 +235,37 @@ $(function () {
     
     //섹션별 색상다름 설정
     $(window).scroll(function(){
+        var secOffset1 = $("#section1").offset();
+        var secOffset2 = $("#section2").offset();
+        var secOffset3 = $("#section3").offset();
+        var secOffset4 = $("#section4").offset();
+        var secOffset5 = $("#section5").offset();
+
         var scrollTop = $(window).scrollTop();
         //console.log(scrollTop);
 
-        if(scrollTop<=1){
+        if(scrollTop <= secOffset1.top){
             $("#wrap").removeClass("color1");
             $("#wrap").removeClass("color2");
             $("#wrap").removeClass("color3");
             $("#wrap").removeClass("color4");
 
-        }else if(scrollTop <= 937){
+        }else if(scrollTop <= secOffset2.top){
             $("#wrap").removeClass("color2");
             $("#wrap").removeClass("color3");
             $("#wrap").removeClass("color4");
             $("#wrap").addClass("color1");
-        } else if (scrollTop <= (937*2)) {
+        } else if (scrollTop <= secOffset3.top) {
             $("#wrap").removeClass("color1");
             $("#wrap").removeClass("color3");
             $("#wrap").removeClass("color4");
             $("#wrap").addClass("color2");
-        } else if (scrollTop <= (937*3)) {
+        } else if (scrollTop <= secOffset4.top) {
             $("#wrap").removeClass("color1");
             $("#wrap").removeClass("color2");
             $("#wrap").removeClass("color4");
             $("#wrap").addClass("color3");
-        } else {
+        } else if (scrollTop <= secOffset5.top) {
             $("#wrap").removeClass("color1");
             $("#wrap").removeClass("color2");
             $("#wrap").removeClass("color3");
@@ -263,6 +273,71 @@ $(function () {
         }
         
     });
+
+    //숫자 카운팅
+    
+    //조건
+    $("#section2 .view_area").click(function(){
+
+        //결과
+        $("#section2 .view_area span").addClass("counting");
+        $('.counting').each(function() {
+          var $this = $(this),
+              countTo = $this.attr('data-count');
+          
+          $({ countNum: $this.text()}).animate({
+            countNum: countTo
+          },
+        
+          {
+        
+            duration: 5000,
+            easing:'swing',
+            step: function() {
+              $this.text(Math.floor(this.countNum));
+            },
+            complete: function() {
+              $this.text(this.countNum);
+            }
+        
+          });  
+          
+        
+        });
+    });
+
+    //코딩, 앱디자인 섹션 가로이동
+    var $bnnNum=1;
+    var $lastNum=$("#train_1 article").size();
+    
+
+    var $banner_w=$("#train_1").width();
+
+    $(window).resize(function(){
+        $banner_w=$("#train_1").width();
+    });
+    
+    $("#section3 .btn_next").click(function(){
+        
+        
+        if($bnnNum<$lastNum){
+            $("#train_1").stop().animate({"left":-$banner_w*$bnnNum});
+            $bnnNum++;
+            console.log("배너넘버"+$bnnNum);
+            console.log("라스트넘버"+$lastNum);
+            console.log("배너길이"+$banner_w);
+        } else if ($bnnNum>=$lastNum){
+            $("#train_1").animate({"left":0});
+            $bnnNum=1;
+            console.log("배너넘버"+$bnnNum);
+            console.log("라스트넘버"+$lastNum);
+            console.log("배너길이"+$banner_w);
+
+        }
+
+    });
+
+
 
     
    

@@ -10,15 +10,16 @@
     <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
     <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
     
     <!-- 로딩페이지 -->
-    <div class="progress" id="progress">
+    <!-- <div class="progress" id="progress">
         <span class="progress-bar"></span>
         <span class="progress-text">0%</span>
-    </div>
+    </div> -->
 
     <!-- 메인페이지 -->
 
@@ -69,11 +70,11 @@
         <!-- 세로 네비게이션 -->
         <div class="indicator">
             <ul>
-                <li><a href="#" alt="Home"></a></li>
-                <li><a href="#" alt="Skills"></a></li>
-                <li><a href="#" alt="Works"></a></li>
-                <li><a href="#" alt="About Me"></a></li>
-                <li><a href="#" alt="Contact"></a></li>
+                <li><a href="#" alt="Home"><span class="txt">Home</span></a></li>
+                <li><a href="#" alt="Skills"><span class="txt">Skills</span></a></li>
+                <li><a href="#" alt="Coding"><span class="txt">Coding</span></a></li>
+                <li><a href="#" alt="Design"><span class="txt">Design</span></a></li>
+                <li><a href="#" alt="Contact"><span class="txt">Contact</span></a></li>
             </ul>
         </div>
         <!-- //세로 네비게이션 -->
@@ -125,19 +126,45 @@
                         </div>
                     </div>
                     <div class="view_area">
+                        <div class="water"></div>
+                        <table class="table_skills" summary="제가 사용하는 언어와 디자인툴에 대한 숙련도를 도식화 하였습니다.">
+                            <thead class="blind">
+                                <tr>
+                                    <th scope="col">language</th>
+                                    <th scope="col">숙련도</th>
+                                    <th scope="col">language2</th>
+                                    <th scope="col">숙련도</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><img class="img_lang l_html5" src="img/icon_html5.png" alt="icon_html5" /><br /></th>
+                                    <td><span class="" data-count="90">0</span>%</td>
+                                    <th scope="row" ><img class="img_lang l_jq" src="img/icon_jquery.png" alt="icon_jquery" /><br /></th>
+                                    <td><span class="" data-count="80">0</span>%</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><img class="img_lang l_css3" src="img/icon_css3.png" alt="icon_css3" /><br /></th>
+                                    <td><span class="" data-count="80">0</span>%</td>
+                                    <th scope="row"><img class="img_lang l_ps" src="img/icon_ps.png" alt="icon_ps" /><br /></th>
+                                    <td><span class="" data-count="75">0</span>%</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><img class="img_lang l_js" src="img/icon_javascript.png" alt="icon_javascript" /><br /></th>
+                                    <td><span class="" data-count="75">0</span>%</td>
+                                    <th scope="row"><img class="img_lang l_xd" src="img/icon_xd.png" alt="icon_xd" /><br /></th>
+                                    <td><span class="" data-count="80">0</span>%</td>
+                                </tr>
+                            </tbody>
 
-
-
-                        <!-- HTML5 95% <br />
-                        CSS3 90% <br />
-                        SCSS 80% <br />
-                        JAVASCRIPT 70% <br />
-                        JQuery 85% <br />
-                        PS / AI 60% <br />
-                        XD 70% <br /> -->
-
+                        </table>
                         
-
+                        
+                        
+                        
+                        
+                        
+                        
                         <span class="order"></span>
                     </div>
                 </article>
@@ -160,7 +187,16 @@
             
             <!-- 3. works_coding -->
             <section class="works_coding" id="section3">
-                <h2 class="blind">works_coding</h2>
+                <h2>
+                    <span class="blind">works_coding</span>
+                </h2>
+                <div class="arrow">
+                    <a href="#" class="btn_prev">&lt;</a>
+                    <a href="#" class="btn_next">&gt;</a>
+                </div>
+                
+                <!-- train_1 -->
+                <div id="train_1">
                 <!-- 3-1. 삼성전기 -->
                 <article class="samsung">
                     <div class="text_wrap">
@@ -168,7 +204,9 @@
                         <div class="divLine"></div>
                         <div class="desc_area">
                             <p class="desc">
-                                삼성전기 홈페이지를 만들었습니다.
+                                <a href="#">
+                                    <span class="btn_more">View Detail</span>
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -211,6 +249,8 @@
                         <span class="order">03</span>
                     </div>
                 </article>
+            </div>
+            <!-- //train_1 -->
             </section>
             <!-- //3. works_coding -->
             
@@ -284,7 +324,6 @@
                         </div>
                     </div>
                     <div class="view_area">
-                        <img src="../img/wire.png" alt="11" />
                         <span class="order"></span>
                     </div>
                 </article>

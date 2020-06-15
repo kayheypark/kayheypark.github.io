@@ -27,3 +27,16 @@
 
     background: url("../img/mockup_samsungsem_p.png") no-repeat 0 0;
 background-size: cover;}
+
+.arrow {
+    z-index: 10;
+    font-size: 2rem;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+
+    border: 1px solid red;
+}
+.arrow .btn_prev {}
+.arrow .btn_next {}
