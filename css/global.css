@@ -17,6 +17,8 @@ body {
 a,a:hover {text-decoration: none; color: #fff;}
 p.desc {font-weight: 400; font-size: 0.9rem;}
 
+
+/* 더보기 버튼 */
 .btn_more {
     display: inline-block;
 
@@ -28,3 +30,43 @@ p.desc {font-weight: 400; font-size: 0.9rem;}
 }
 
 .btn_more:hover {box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);}
+
+/*마우스 휠*/
+.mousewheel {
+    position: absolute;
+    top: 65%;
+    /*left: -40px;*/
+    left: -40px;
+
+
+    width: 210px;
+    height: 362px;
+
+    box-shadow: 0 0 150px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+
+    transform: scale(0.2);
+    background:url("../img/mouse.png") no-repeat 0 0;
+
+}
+
+.ball {
+    position: absolute;
+    top: 67px;
+    left: 50%;
+
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 15px;
+
+    transform: translateX(-50%);
+    animation: ball 1.2s infinite linear 0s;
+
+
+}
+
+@keyframes ball {
+    0% {top: 67px;}
+    30%, 100% {top: 143px;}
+}
