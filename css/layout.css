@@ -7,10 +7,10 @@
     transition: background-color 1s linear 0s;
 }
 
-#wrap.color1 {background-color: #2a78c1}
-#wrap.color2 {background-color: #2a2dc1}
-#wrap.color3 {background-color: #522ac1}
-#wrap.color4 {background-color: #c12aad}
+#wrap.color1 {background-color: #2a78c1} /*2*/
+#wrap.color2 {background-color: #043285} /*3*/
+#wrap.color3 {background-color: #2ac1bc} /*4*/
+#wrap.color4 {background-color: #c12aad} /*5*/
 
 header {
     position: fixed;
