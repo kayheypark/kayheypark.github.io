@@ -47,7 +47,7 @@ $(function () {
 
 
     //a 누를때 자동스크롤 방지
-    $(".btn_hamberger ,h1 a, .indicator a, .arrow a").click(function(e){
+    $(".btn_hamberger ,h1 a, .indicator a, .arrow a, section a").click(function(e){
         e.preventDefault();
     });
 
@@ -277,40 +277,56 @@ $(function () {
     //숫자 카운팅
     
     //조건
-    $("#section2 .view_area").click(function(){
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        var secOffset2 = $("#section2").offset();
+        console.log(scrollTop);
+        console.log(secOffset2.top);
+        if(scrollTop == secOffset2.top){
 
-        //결과
-        $("#section2 .view_area span").addClass("counting");
-        $('.counting').each(function() {
-          var $this = $(this),
-              countTo = $this.attr('data-count');
-          
-          $({ countNum: $this.text()}).animate({
-            countNum: countTo
-          },
+
+            $("#section2 .view_area span").addClass("counting");
+            $('.counting').each(function() {
+              var $this = $(this),
+                  countTo = $this.attr('data-count');
+              
+              $({ countNum: $this.text()}).animate({
+                countNum: countTo
+              },
+            
+              {
+            
+                duration: 1400,
+                easing:'swing',
+                step: function() {
+                  $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                  $this.text(this.countNum);
+                }
+            
+              });  
+              
+            
+            });
+            
+        } else {
+            $("#section2 .view_area .skill_cnt").removeClass("counting").html("0");
+
+        }
         
-          {
-        
-            duration: 5000,
-            easing:'swing',
-            step: function() {
-              $this.text(Math.floor(this.countNum));
-            },
-            complete: function() {
-              $this.text(this.countNum);
-            }
-        
-          });  
-          
-        
-        });
+    
+
     });
+
+
+
+    
+
 
     //코딩, 앱디자인 섹션 가로이동
     var $bnnNum=1;
     var $lastNum=$("#train_1 article").size();
-    
-
     var $banner_w=$("#train_1").width();
 
     $(window).resize(function(){
@@ -333,6 +349,61 @@ $(function () {
             console.log("라스트넘버"+$lastNum);
             console.log("배너길이"+$banner_w);
 
+        }
+
+    });
+    $("#section3 .btn_prev").click(function(){
+      if($bnnNum<=1){
+          $bnnNum=$lastNum;
+          $("#train_1").stop().animate({"left":-$banner_w*($lastNum-1)});
+        } else if ($bnnNum <= $lastNum) {
+            $bnnNum--;
+            $("#train_1").stop().animate({"left":-$banner_w*($bnnNum-1)});
+            console.log("배너넘버"+$bnnNum);
+            console.log("라스트넘버"+$lastNum);
+            console.log("배너길이"+$banner_w);
+        }
+
+    });
+
+    //앱디자인 배너
+    var $bnnNumB=1;
+    var $lastNumB=$("#train_2 article").size();
+    var $banner_wB=$("#train_2").width();
+
+    $(window).resize(function(){
+        $banner_wB=$("#train_2").width();
+    });
+    
+    $("#section4 .btn_next").click(function(){
+        
+        
+        if($bnnNumB<$lastNumB){
+            $("#train_2").stop().animate({"left":-$banner_wB*$bnnNumB});
+            $bnnNumB++;
+            console.log("배너넘버"+$bnnNumB);
+            console.log("라스트넘버"+$lastNumB);
+            console.log("배너길이"+$banner_wB);
+        } else if ($bnnNumB>=$lastNumB){
+            $("#train_2").animate({"left":0});
+            $bnnNumB=1;
+            console.log("배너넘버"+$bnnNumB);
+            console.log("라스트넘버"+$lastNumB);
+            console.log("배너길이"+$banner_wB);
+
+        }
+
+    });
+    $("#section4 .btn_prev").click(function(){
+      if($bnnNumB<=1){
+          $bnnNumB=$lastNumB;
+          $("#train_2").stop().animate({"left":-$banner_wB*($lastNumB-1)});
+        } else if ($bnnNumB <= $lastNumB) {
+            $bnnNumB--;
+            $("#train_2").stop().animate({"left":-$banner_wB*($bnnNumB-1)});
+            console.log("배너넘버"+$bnnNumB);
+            console.log("라스트넘버"+$lastNumB);
+            console.log("배너길이"+$banner_wB);
         }
 
     });
