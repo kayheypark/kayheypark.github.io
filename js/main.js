@@ -47,7 +47,7 @@ $(function () {
 
 
     //a 누를때 자동스크롤 방지
-    $(".btn_hamberger ,h1 a, .indicator a, .arrow a, section a").click(function(e){
+    $(".btn_hamberger ,h1 a, .indicator a, .arrow a").click(function(e){
         e.preventDefault();
     });
 
