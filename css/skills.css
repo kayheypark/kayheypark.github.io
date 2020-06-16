@@ -10,28 +10,6 @@ section.skills .view_area {border: none;}
 .graph_Dsg td{padding-bottom: 0 !important;} */
 
 
-.water {
-    position: absolute;
-    top: 47%;
-    left: 77%;
-    border: 10px solid #fff;
-    content: '';
-    display: block;
-    min-height: 200px;
-    min-width: 200px;
-    width: 40vh;
-    height: 40vh;  
-    background-color: var(--blob);  
-    box-shadow: var(--shades);
-    background-size: 1600% 1600%;
-    transform-origin: 50% 50%;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    animation: 
-      transform 5s ease-in-out infinite both alternate,
-      movement 4s ease-in-out infinite both;
-  }
-  
   
   @keyframes transform {
       0%,

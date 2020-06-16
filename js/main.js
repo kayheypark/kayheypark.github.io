@@ -78,7 +78,7 @@ $(function () {
 
 
     //메인_킥보드
-    $("section").mousemove(function(e){
+    $(window).mousemove(function(e){
         var posX = e.pageX;      // 마우스 커서의 x축 좌표값
         var posY = e.pageY;     // 마우스 커서의 Y축 좌표값
 
@@ -89,19 +89,19 @@ $(function () {
             "top": 140 - (posY/5),
         });
         $(".speed_2").css({
-            "top": 340 + (posY/5),
+            "top": 180 + (posY/5),
         });
         $(".speed_3").css({
-            "top": 1000 - (posY/1),
+            "top": 210 - (posY/5),
         });
         $(".kickboard_area").css({
-            "left": -350 + (posX/3),
+            "left": 300 + (posX/3),
             "top": -200 + (posY/2)
         });
     });
 
     //킥보드에 마우스 홀딩시 부스터
-    $("#section1 .view_area").mousedown(function(){
+    $(window).mousedown(function(){
         $(".kickboard_area").removeClass("on");
         $(".kickboard_area").addClass("on");
 
@@ -109,7 +109,7 @@ $(function () {
         $(".speed_2").addClass("on");
         $(".speed_3").addClass("on");
     });
-    $("body").mouseup(function(){
+    $(window).mouseup(function(){
         $(".kickboard_area").removeClass("on");
         $(".speed_1").removeClass("on");
         $(".speed_2").removeClass("on");
@@ -122,6 +122,7 @@ $(function () {
 
     //원스크롤
     //mousewheel
+    
     $("section").bind("mousewheel scroll", function(event, delta){
         event.preventDefault();
         if(delta>0){
@@ -315,6 +316,22 @@ $(function () {
 
         }
         
+    
+
+    });
+
+    //섹션 2부터 킥보드 좌측 하단으로 이동
+
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        var secOffset2 = $("#section2").offset();
+        console.log(scrollTop);
+        console.log(secOffset2.top);
+        if(scrollTop >= secOffset2.top){
+            $(".kickboard_area").addClass("mini");
+        } else {
+            $(".kickboard_area").removeClass("mini");
+        }
     
 
     });

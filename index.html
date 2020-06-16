@@ -12,6 +12,7 @@
     <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/effects.js"></script>
 </head>
 <body>
     
@@ -29,9 +30,18 @@
         <!-- 마우스 휠 -->
         <div class="mousewheel">
             <div class="ball"></div>
-
+            <span class="mouse_txt">
+                scroll down
+            </span>
         </div>
         <!-- //마우스 휠 -->
+        <!-- 킥보드 -->
+        <div class="kickboard_area" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+            <div class="kickboard"></div>
+            <div class="tire_1 tires"></div>
+            <div class="tire_2 tires"></div>
+        </div>
+        <!-- //킥보드 -->
 
 
 
@@ -92,10 +102,14 @@
 
             <!-- 1. home -->
             <section class="home" id="section1">
+                <!-- 잎배경 -->
+                <div class="bgart_sec1"></div>
             <h2 class="blind">home</h2>
+
             <article class="main">
                 <div class="text_wrap">
-                    <h3>:Park<br />Gyeong<br />Ho</h3>
+                    
+                    <h3>:Park</h3>
                     <div class="divLine"></div>
                     <div class="desc_area">
                         <p class="desc">
@@ -105,11 +119,7 @@
                     </div>
                 </div>
                 <div class="view_area" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
-                    <div class="kickboard_area">
-                        <div class="kickboard"></div>
-                        <div class="tire_1 tires"></div>
-                        <div class="tire_2 tires"></div>
-                    </div>
+                   
                     <div class="speed_1 speeds"></div>
                     <div class="speed_2 speeds"></div>
                     <div class="speed_3 speeds"></div>
@@ -132,7 +142,6 @@
                         </div>
                     </div>
                     <div class="view_area">
-                        <div class="water"></div>
                         <table class="table_skills" summary="제가 사용하는 언어와 디자인툴에 대한 숙련도를 도식화 하였습니다.">
                             <thead class="blind">
                                 <tr>
@@ -144,21 +153,21 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row"><img class="img_lang l_html5" src="img/icon_html5.png" alt="icon_html5" /><br /></th>
+                                    <th scope="row"><img class="img_lang l_html5" src="img/icon_html5.png" alt="icon_html5" /></th>
                                     <td><span class="skill_cnt" data-count="90" data-original="0">0</span>%</td>
-                                    <th scope="row" ><img class="img_lang l_jq" src="img/icon_jquery.png" alt="icon_jquery" /><br /></th>
+                                    <th scope="row" ><img class="img_lang l_jq" src="img/icon_jquery_w.png" alt="icon_jquery" /></th>
                                     <td><span class="skill_cnt" data-count="80" data-original="0">0</span>%</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><img class="img_lang l_css3" src="img/icon_css3.png" alt="icon_css3" /><br /></th>
-                                    <td><span class="skill_cnt" data-count="80" data-original="0">0</span>%</td>
-                                    <th scope="row"><img class="img_lang l_ps" src="img/icon_ps.png" alt="icon_ps" /><br /></th>
+                                    <th scope="row"><img class="img_lang l_css3" src="img/icon_css3.png" alt="icon_css3" /></th>
+                                    <td><span class="skill_cnt" data-count="90" data-original="0">0</span>%</td>
+                                    <th scope="row"><img class="img_lang l_ps" src="img/icon_ps.png" alt="icon_ps" /></th>
                                     <td><span class="skill_cnt" data-count="75" data-original="0">0</span>%</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><img class="img_lang l_js" src="img/icon_javascript.png" alt="icon_javascript" /><br /></th>
-                                    <td><span class="skill_cnt" data-count="75" data-original="0">0</span>%</td>
-                                    <th scope="row"><img class="img_lang l_xd" src="img/icon_xd.png" alt="icon_xd" /><br /></th>
+                                    <th scope="row"><img class="img_lang l_js" src="img/icon_javascript.png" alt="icon_javascript" /></th>
+                                    <td><span class="skill_cnt" data-count="80" data-original="0">0</span>%</td>
+                                    <th scope="row"><img class="img_lang l_xd" src="img/icon_xd.png" alt="icon_xd" /></th>
                                     <td><span class="skill_cnt" data-count="80" data-original="0">0</span>%</td>
                                 </tr>
                             </tbody>
@@ -217,9 +226,21 @@
                         </div>
                     </div>
                     <div class="view_area">
-                        <div class="bg_samsungsem"></div>
-                        <div class="eff_samsungsem"></div>
-                        <div class="mockup_samsungsem_p"></div>
+                        <div class="wire_iMac">
+                            <div class="iMac_monitor">
+                                <div class="page_samsung_main"></div>
+                            </div>
+                        </div>
+                        <div class="wire_iMac">
+                            <div class="iMac_monitor_small">
+                                <div class="page_samsung_sub1"></div>
+                            </div>
+                        </div>
+                        <div class="wire_iMac">
+                            <div class="iMac_monitor_small">
+                                <div class="page_samsung_sub2"></div>
+                            </div>
+                        </div>
                         <span class="order">01</span>
                     </div>
                     </article>
@@ -231,11 +252,29 @@
                         <div class="divLine"></div>
                     <div class="desc_area">
                         <p class="desc">
-                            CJONE 홈페이지를 만들었습니다.
+                            <a href="#">
+                                <span class="btn_more">View Detail</span>
+                            </a>
                         </p>
                     </div>
                     </div>
                     <div class="view_area">
+                        <div class="wire_iMac">
+                            <div class="iMac_monitor">
+                                <div class="page_cjone_pc"></div>
+                            </div>
+                        </div>
+                        <div class="wire_iPad">
+                            <div class="iPad_monitor">
+                                <div class="page_cjone_tab"></div>
+                            </div>
+                        </div>
+                        <div class="wire_iPhone">
+                            <div class="iPhone_monitor">
+                                <div class="page_cjone_mob"></div>
+                                <div class="iPhone_status"></div>
+                            </div>
+                        </div>
                         <span class="order">02</span>
                     </div>
                 </article>
@@ -243,16 +282,38 @@
                 <!-- 3-3. 웹표준 -->
                 <article class="webstandard">
                     <div class="text_wrap">
-                        <h3>Web Standard</h3>
+                        <h3>웹표준 사이트</h3>
                         <div class="divLine"></div>
                         <div class="desc_area">
                         <p class="desc">
-                            Web Standard 홈페이지를 만들었습니다.
+                            <a href="#">
+                                <span class="btn_more">View Detail</span>
+                            </a>
                         </p>
                     </div>
                     </div>
                     <div class="view_area">
+                        <div class="wire_webs_pc"></div>
                         <span class="order">03</span>
+                    </div>
+                </article>
+
+                <!-- 3-4. 웹표준 -->
+                <article class="instagram">
+                    <div class="text_wrap">
+                        <h3>인스타그램</h3>
+                        <div class="divLine"></div>
+                        <div class="desc_area">
+                        <p class="desc">
+                            <a href="#">
+                                <span class="btn_more">View Detail</span>
+                            </a>
+                        </p>
+                    </div>
+                    </div>
+                    <div class="view_area">
+                        <div class="wire_webs_pc"></div>
+                        <span class="order">04</span>
                     </div>
                 </article>
             </div>
@@ -274,15 +335,18 @@
                 <!-- 4-1. 앱디자인 -->
                 <article class="appDsg">
                     <div class="text_wrap">
-                        <h3>앱디자인</h3>
+                        <h3>알지</h3>
                         <div class="divLine"></div>
                     <div class="desc_area">
                         <p class="desc">
-                            앱디자인을 하였습니다.
+                            <a href="#">
+                                <span class="btn_more">View Detail</span>
+                            </a>
                         </p>
                     </div>
                     </div>
                     <div class="view_area">
+                        <div class="wire_samsungsem_p"></div>
                         <span class="order">01</span>
                     </div>
                 </article>
@@ -290,15 +354,18 @@
                 <!-- 4-2. 반응형웹디자인 -->
                 <article class="webDsg">
                     <div class="text_wrap">
-                        <h3>반응형웹디자인</h3>
+                        <h3>큐브엔터테인먼트</h3>
                         <div class="divLine"></div>
                         <div class="desc_area">
                             <p class="desc">
-                                반응형 웹 디자인을 하였습니다.
+                                <a href="#">
+                                    <span class="btn_more">View Detail</span>
+                                </a>
                             </p>
                         </div>
                         </div>
                         <div class="view_area">
+                            <div class="wire_samsungsem_p"></div>
                             <span class="order">02</span>
                         </div>
                     </article>
@@ -306,15 +373,18 @@
                     <!-- 4-3. 퓨어 CSS -->
                     <article class="cssDsg">
                         <div class="text_wrap">
-                            <h3>퓨어 CSS</h3>
+                            <h3>페이스북 이모지</h3>
                             <div class="divLine"></div>
                             <div class="desc_area">
                                 <p class="desc">
-                                    CSS 디자인을 하였습니다.
+                                    <a href="#">
+                                        <span class="btn_more">View Detail</span>
+                                    </a>    
                                 </p>
                             </div>
                             </div>
                             <div class="view_area">
+                                <div class="wire_samsungsem_p"></div>
                                 <span class="order">03</span>
                             </div>
                         </article>

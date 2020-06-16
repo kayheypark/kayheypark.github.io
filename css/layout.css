@@ -1,14 +1,15 @@
 /* layout.css */
 
 #wrap {
-    background-color: #45dad5;              /*home*/
-    transition: background-color 1s linear 0s;
+    background: #45dad5;
+    background-size: 100%;               /*home*/
+    transition: background 1s linear 0s;
     }
 
-#wrap.color1 {background-color: #84abfd} /*skills*/
-#wrap.color2 {background-color: #47a77a} /*coding*/
-#wrap.color3 {background-color: #bfc086} /*dsgn*/
-#wrap.color4 {background-color: #252525} /*contact*/
+#wrap.color1 {background: #84abfd url("");} /*skills*/
+#wrap.color2 {background: #47a77a url("");} /*coding*/
+#wrap.color3 {background: #bfc086 url("");} /*dsgn*/
+#wrap.color4 {background: #252525 url("");} /*contact*/
 
 header {
     position: fixed;
@@ -56,16 +57,18 @@ header {
     position: relative;
     box-sizing: border-box;
     height: calc(100vh);
-    overflow: hidden;
 }
 
 .text_wrap {margin-left: 15%; position: absolute; top: 50%; transform: translateY(-50%);}
 .text_wrap > h3 {font-size: 3.0rem; font-weight: medium;}
 .text_wrap > .divLine {
-                        background: url("../img/line_mid_2.png") no-repeat 0 0;
+                        background: url("../img/line_wind.png") no-repeat 0 0;
     
-                        width: 331px; height: 042.01086124676px;
-                        margin: 40px 0;}
+                        
+                        width: 930px; height: 141.01086124676px;
+                        transform: scale(0.3);
+                        margin:25px 0 30px -350px;
+                        }
 .text_wrap > .desc_area {}
 .text_wrap > .desc_area > .desc {}
 
@@ -98,29 +101,15 @@ header {
 .works_coding {position: relative; width: 100vh; height: 100vh;}
 
     .samsung {position: absolute !important; left: 0; top: 0; width: 100%; height: 100vh;}
-    .works_coding.once .samsung {left: -100%;}
-    .works_coding.twice .samsung {left: -200%;}
-
     .cjone {position: absolute !important; left: 100%; width: 100%; height: 100vh;}
-    .works_coding.once .cjone {left: 0;}
-    .works_coding.twice .cjone {left: -100%;}
-
     .webstandard {position: absolute !important; left: 200%; width: 100%; height: 100vh;}
-    .works_coding.once .webstandard {left: 100%;}
-    .works_coding.twice .webstandard {left: 0;}
+    .instagram {position: absolute !important; left: 300%; width: 100%; height: 100vh;}
+
 
 .works_design {position: relative; width: 100vh; height: 100vh;}
     .appDsg {position: absolute !important; left: 0; top: 0; width: 100%; height: 100vh;}
-    .works_design.once .appDsg {left: -100%;}
-    .works_design.twice .appDsg {left: -200%;}
-
     .webDsg {position: absolute !important; left: 100%; width: 100%; height: 100vh;}
-    .works_design.once .webDsg {left: 0;}
-    .works_design.twice .webDsg {left: -100%;}
-
     .cssDsg {position: absolute !important; left: 200%; width: 100%; height: 100vh;}
-    .works_design.once .cssDsg {left: 100%;}
-    .works_design.twice .cssDsg {left: 0;}
 
 /*기차*/
 #train_1, #train_2 {

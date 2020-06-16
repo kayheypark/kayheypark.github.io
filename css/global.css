@@ -31,8 +31,54 @@ p.desc {font-weight: 400; font-size: 0.9rem;}
 
 .btn_more:hover {box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);}
 
+/*킥보드*/
+.kickboard_area {
+    position: absolute;
+    z-index: 0;
+    top: 5%;
+    -webkit-transition: all 2500ms cubic-bezier(0.035, 0.350, 0.165, 0.925);
+    -moz-transition: all 2500ms cubic-bezier(0.035, 0.350, 0.165, 0.925);
+      -o-transition: all 2500ms cubic-bezier(0.035, 0.350, 0.165, 0.925);
+         transition: all 2500ms cubic-bezier(0.035, 0.350, 0.165, 0.925); /* custom */
+    
+}
+/*섹션 2~ 작아지고 좌측 하단 위치*/
+.kickboard_area.mini {
+    position: fixed !important;
+    top: 34% !important;
+    left: -22.5% !important;
+    transform: scale(0.2) !important;
+
+}
+
+/*킥보드 본체*/
+.kickboard {
+
+
+    top: 25%;
+    transform: translateY(-0%);
+
+    width: 120vh !important;
+    height: 100vh !important;
+    
+    background: url("../img/wire.png") no-repeat 30% 50% !important;
+    background-size: 50% !important;
+
+    animation: viv .5s linear infinite;
+
+}
+
+/* 부스터 발동시*/
+.kickboard_area.on {transform: scale(0.5);}
+.kickboard_area.on .tires {animation-duration: 0.1s;}
+
+
+
+
 /*마우스 휠*/
 .mousewheel {
+    z-index: 0;
+
     position: absolute;
     top: 65%;
     /*left: -40px;*/
@@ -66,7 +112,19 @@ p.desc {font-weight: 400; font-size: 0.9rem;}
 
 }
 
+
 @keyframes ball {
     0% {top: 67px;}
     30%, 100% {top: 143px;}
+}
+
+.mouse_txt {
+    position: absolute;
+    top: 13%;
+    left: 100%;
+
+    display: block;
+
+    transform: scale(1) rotate(-90deg);
+    font-size: 5rem;
 }
