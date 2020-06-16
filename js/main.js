@@ -329,23 +329,14 @@ $(function () {
         console.log(secOffset2.top);
         if(scrollTop >= (secOffset2.top/10)){
             $(".kickboard_area").addClass("mini");
-        } else {
-            $(".kickboard_area").removeClass("mini");
+        } else if (scrollTop < secOffset2.top ) {
+            $(".kickboard_area").css({"position":"fixed"}).css({"top":-25,"left":700}).delay(20000).removeClass("mini");
         }
     
 
     });
 
-    $(window).mousewheel(function(delta){
-        var scrollTop = $(window).scrollTop();
-        var secOffset2 = $("#section2").offset();
-
-        if(delta>0 && scrollTop >= (secOffset2.top/1.1)){
-            $(".kickboard_area").removeClass("mini");
-            $(".kickboard_area").css({"top":-120});
-        }
-        
-    });
+  
 
 
 

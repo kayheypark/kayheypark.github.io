@@ -7,7 +7,7 @@ body {
     
     font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
     color: #fff;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
     box-sizing: border-box;
     /* 스크롤바 삭제 */
     overflow: hidden;
@@ -133,7 +133,7 @@ p.desc {font-weight: 400; font-size: 0.9rem;}
 .mouse_txt {
     position: absolute;
     top: 13%;
-    left: 100%;
+    left: 180%;
 
     display: block;
 
