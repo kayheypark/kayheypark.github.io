@@ -196,7 +196,7 @@ $(function () {
                     $(".indicator ul li a").removeClass("on"); //주기적으로 삭제
                     $(".indicator ul li:nth-of-type(5) a").addClass("on");
                 }
-        },400);
+        },4000);
 
 
     //GNB
@@ -282,8 +282,6 @@ $(function () {
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
         var secOffset2 = $("#section2").offset();
-        console.log(scrollTop);
-        console.log(secOffset2.top);
         if(scrollTop == secOffset2.top){
 
 
@@ -326,8 +324,6 @@ $(function () {
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
         var secOffset2 = $("#section2").offset();
-        console.log(scrollTop);
-        console.log(secOffset2.top);
         if(scrollTop >= (secOffset2.top/10)){
             $(".kickboard_area").addClass("mini");
         } else if (scrollTop < secOffset2.top ) {
@@ -359,15 +355,9 @@ $(function () {
         if($bnnNum<$lastNum){
             $("#train_1").stop().animate({"left":-$banner_w*$bnnNum});
             $bnnNum++;
-            console.log("배너넘버"+$bnnNum);
-            console.log("라스트넘버"+$lastNum);
-            console.log("배너길이"+$banner_w);
         } else if ($bnnNum>=$lastNum){
             $("#train_1").animate({"left":0});
             $bnnNum=1;
-            console.log("배너넘버"+$bnnNum);
-            console.log("라스트넘버"+$lastNum);
-            console.log("배너길이"+$banner_w);
 
         }
 
@@ -379,9 +369,6 @@ $(function () {
         } else if ($bnnNum <= $lastNum) {
             $bnnNum--;
             $("#train_1").stop().animate({"left":-$banner_w*($bnnNum-1)});
-            console.log("배너넘버"+$bnnNum);
-            console.log("라스트넘버"+$lastNum);
-            console.log("배너길이"+$banner_w);
         }
 
     });
@@ -401,15 +388,9 @@ $(function () {
         if($bnnNumB<$lastNumB){
             $("#train_2").stop().animate({"left":-$banner_wB*$bnnNumB});
             $bnnNumB++;
-            console.log("배너넘버"+$bnnNumB);
-            console.log("라스트넘버"+$lastNumB);
-            console.log("배너길이"+$banner_wB);
         } else if ($bnnNumB>=$lastNumB){
             $("#train_2").animate({"left":0});
             $bnnNumB=1;
-            console.log("배너넘버"+$bnnNumB);
-            console.log("라스트넘버"+$lastNumB);
-            console.log("배너길이"+$banner_wB);
 
         }
 
@@ -421,9 +402,6 @@ $(function () {
         } else if ($bnnNumB <= $lastNumB) {
             $bnnNumB--;
             $("#train_2").stop().animate({"left":-$banner_wB*($bnnNumB-1)});
-            console.log("배너넘버"+$bnnNumB);
-            console.log("라스트넘버"+$lastNumB);
-            console.log("배너길이"+$banner_wB);
         }
 
     });
