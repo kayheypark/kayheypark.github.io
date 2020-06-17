@@ -7,6 +7,7 @@ section.home {
 
 section.home .view_area {
     border: none;
+
     overflow: hidden;
 
     position: absolute;

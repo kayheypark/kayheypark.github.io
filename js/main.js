@@ -102,6 +102,7 @@ $(function () {
 
     //킥보드에 마우스 홀딩시 부스터
     $(window).mousedown(function(){
+        $(".holdme").hide();
         $(".kickboard_area").removeClass("on");
         $(".kickboard_area").addClass("on");
 

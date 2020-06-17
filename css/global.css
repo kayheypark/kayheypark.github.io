@@ -18,6 +18,9 @@ a,a:hover {text-decoration: none; color: #fff;}
 p.desc {font-weight: 400; font-size: 0.9rem;}
 
 
+/*디스플레이 넌*/
+.none {display: none;}
+
 /* 더보기 버튼 */
 .btn_more {
     display: inline-block;
@@ -57,7 +60,7 @@ p.desc {font-weight: 400; font-size: 0.9rem;}
 /*섹션 2~ 작아지고 좌측 하단 위치*/
 .kickboard_area.mini {
     position: fixed !important;
-    top: 44% !important;
+    top: 34% !important;
     left: -22.5% !important;
     transform: scale(0.2) !important;
 
@@ -79,6 +82,23 @@ p.desc {font-weight: 400; font-size: 0.9rem;}
     animation: viv .5s linear infinite;
 
 }
+/* 홀드미 */
+.holdme {
+    position: absolute;
+    top: 33%;
+    left: 30%;
+
+    width: 210px;
+    height: 362px;
+    transform: scale(0.2);
+
+    box-shadow: 0 0 150px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+
+    background: url("../img/mouse_2.png") no-repeat 0 0;
+}
+
+
 
 /* 부스터 발동시*/
 .kickboard_area.on {transform: scale(0.5);}

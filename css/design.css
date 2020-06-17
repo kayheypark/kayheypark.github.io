@@ -1,2 +1,12 @@
 /* design.css */
 
+.appDsg {}
+.appDsg .view_area {
+    background: url("../img/img_alarmmap.jpg") no-repeat 0 0;
+    background-size: 100%;
+}
+
+.webDsg .view_area {
+    background: url("../img/img_cube.png") no-repeat 0 0;
+    background-size: 100%;
+}

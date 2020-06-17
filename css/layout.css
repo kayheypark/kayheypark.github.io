@@ -1,12 +1,12 @@
 /* layout.css */
 
 #wrap {
-    background: #45dad5;
+    background: #4799a7;
     background-size: 100%;               /*home*/
     transition: background 1s linear 0s;
     }
 
-#wrap.color1 {background: #84abfd url("");} /*skills*/
+#wrap.color1 {background: #4769a7 url("");} /*skills*/
 #wrap.color2 {background: #47a77a url("");} /*coding*/
 #wrap.color3 {background: #bfc086 url("");} /*dsgn*/
 #wrap.color4 {background: #252525 url("");} /*contact*/
@@ -59,8 +59,20 @@ header {
     height: calc(100vh);
 }
 
-.text_wrap {margin-left: 15%; position: absolute; top: 50%; transform: translateY(-50%);}
+.text_wrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+    margin-left: 13%;
+    padding: 3%;
+    }
+
+
+
 .text_wrap > h3 {font-size: 3.0rem; font-weight: medium;}
+.text_wrap > h3 > .type {position: absolute; font-size: 1.2rem; top: -9%; left: 1%;}
 .text_wrap > .divLine {
                         background: url("../img/line_wind.png") no-repeat 0 0;
     
@@ -104,6 +116,7 @@ header {
     .cjone {position: absolute !important; left: 100%; width: 100%; height: 100vh;}
     .webstandard {position: absolute !important; left: 200%; width: 100%; height: 100vh;}
     .instagram {position: absolute !important; left: 300%; width: 100%; height: 100vh;}
+    .kakao {position: absolute !important; left: 400%; width: 100%; height: 100vh;}
 
 
 .works_design {position: relative; width: 100vh; height: 100vh;}

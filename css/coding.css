@@ -230,6 +230,29 @@ overflow: hidden;
 
     animation: pageScroll 5s infinite alternate 0s;
 }
+.kakao .wire_iPhone,
+.instagram .wire_iPhone {
+    top: 0; left: 0;
+    transform: scale(1);
+}
+
+.page_instagram {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    
+    width: 100%;
+    height: 100%;
+    transform:scale(1);
+
+    background: url("../img/page_instagram.png") no-repeat 0 0;
+    background-size: cover;
+
+    animation: pageScroll 5s infinite alternate 0s;
+
+}
+
+.page_kakao_tab1 {top: -15px;}
 
 
 
