@@ -268,5 +268,6 @@ overflow: hidden;
 
     /*border: 1px solid red;*/
 }
-.arrow .btn_prev {float: left;}
+.arrow .btn_prev {float: left; opacity: 0.02;}
+.arrow .btn_prev:hover {opacity: 1;}
 .arrow .btn_next {float: right; margin-right: -110px;}

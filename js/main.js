@@ -125,15 +125,14 @@ $(function () {
     //mousewheel
     
     $("section").bind("mousewheel scroll", function(event, delta){
-        event.preventDefault();
         if(delta>0){
             //마우스 휠을 올렸을 때, 양수값
             var prev = $(this).prev().offset().top;
-            $("html,body").stop().animate({"scrollTop":prev},1000,"swing");
+            $("html,body").stop().animate({"scrollTop":prev},1500,"easeInOutQuint");
         } else if(delta<0){
             // 마우스 휠 내렸을때, 음수값
             var next = $(this).next().offset().top;
-            $("html,body").stop().animate({"scrollTop":next},1000,"swing");
+            $("html,body").stop().animate({"scrollTop":next},1500,"easeInOutQuint");
         }        
     });
 
@@ -157,7 +156,7 @@ $(function () {
      //클릭시 섹션이동
     function IdcMove(seq){
         var offset = $("#section" + seq).offset();
-        $('html, body').stop().animate({scrollTop : offset.top}, 1000, "swing");
+        $('html, body').stop().animate({"scrollTop" : offset.top}, 1000, "easeInOutQuint");
         $("#gnb").removeClass("on");
     }
     
@@ -196,7 +195,7 @@ $(function () {
                     $(".indicator ul li a").removeClass("on"); //주기적으로 삭제
                     $(".indicator ul li:nth-of-type(5) a").addClass("on");
                 }
-        },4000);
+        },250);
 
 
     //GNB
@@ -353,10 +352,10 @@ $(function () {
         
         
         if($bnnNum<$lastNum){
-            $("#train_1").stop().animate({"left":-$banner_w*$bnnNum});
+            $("#train_1").stop().animate({"left":-$banner_w*$bnnNum},1500,"easeInOutQuint");
             $bnnNum++;
         } else if ($bnnNum>=$lastNum){
-            $("#train_1").animate({"left":0});
+            $("#train_1").animate({"left":0},1500,"easeInOutQuint");
             $bnnNum=1;
 
         }
@@ -365,10 +364,10 @@ $(function () {
     $("#section3 .btn_prev").click(function(){
       if($bnnNum<=1){
           $bnnNum=$lastNum;
-          $("#train_1").stop().animate({"left":-$banner_w*($lastNum-1)});
+          $("#train_1").stop().animate({"left":-$banner_w*($lastNum-1)},1500,"easeInOutQuint");
         } else if ($bnnNum <= $lastNum) {
             $bnnNum--;
-            $("#train_1").stop().animate({"left":-$banner_w*($bnnNum-1)});
+            $("#train_1").stop().animate({"left":-$banner_w*($bnnNum-1)},1500,"easeInOutQuint");
         }
 
     });
@@ -383,13 +382,11 @@ $(function () {
     });
     
     $("#section4 .btn_next").click(function(){
-        
-        
         if($bnnNumB<$lastNumB){
-            $("#train_2").stop().animate({"left":-$banner_wB*$bnnNumB});
+            $("#train_2").stop().animate({"left":-$banner_wB*$bnnNumB},1500,"easeInOutQuint");
             $bnnNumB++;
         } else if ($bnnNumB>=$lastNumB){
-            $("#train_2").animate({"left":0});
+            $("#train_2").animate({"left":0},1500,"easeInOutQuint");
             $bnnNumB=1;
 
         }
@@ -398,10 +395,10 @@ $(function () {
     $("#section4 .btn_prev").click(function(){
       if($bnnNumB<=1){
           $bnnNumB=$lastNumB;
-          $("#train_2").stop().animate({"left":-$banner_wB*($lastNumB-1)});
+          $("#train_2").stop().animate({"left":-$banner_wB*($lastNumB-1)},1500,"easeInOutQuint");
         } else if ($bnnNumB <= $lastNumB) {
             $bnnNumB--;
-            $("#train_2").stop().animate({"left":-$banner_wB*($bnnNumB-1)});
+            $("#train_2").stop().animate({"left":-$banner_wB*($bnnNumB-1)},1500,"easeInOutQuint");
         }
 
     });

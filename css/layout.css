@@ -65,13 +65,13 @@ header {
     transform: translateY(-50%);
 
 
-    margin-left: 13%;
+    margin-left: 10%;
     padding: 3%;
     }
 
 
 
-.text_wrap > h3 {font-size: 3.0rem; font-weight: medium;}
+.text_wrap > h3 {font-size: 5.0rem; font-weight: medium;}
 .text_wrap > h3 > .type {position: absolute; font-size: 1.2rem; top: -3%;}
 .text_wrap > .divLine {
                         background: url("../img/line_wind.png") no-repeat 0 0;
@@ -82,12 +82,16 @@ header {
                         margin:-32px 0 -14px -350px;
                         }
 .text_wrap > .desc_area {}
+#section5 .text_wrap {
+    border-radius: 70px;
+    box-shadow: 45px 45px 10px rgba(0, 0, 0, 0.1);
+}
 .text_wrap > .desc_area > .desc {}
 
 .view_area {
     position: absolute;
     top: 50%;
-    right: 10%;
+    right: 5%;
 
     transform: translateY(-50%);
 
