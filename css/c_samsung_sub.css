@@ -1,3 +1,91 @@
 /* c_samsung_sub.css */
 
 body {overflow: visible;}
+
+article.samsung {background: url("../img/img_samsung_sub1_b.png") no-repeat -100px -380px; background-size: 150%;}
+/* .divLine {background-image: url("../img/line_wind_b.png") !important;} */
+.text_wrap {margin-left: 10%;}
+
+
+
+.heading {position: relative; height: 280px; margin-top: 250px;}
+.number{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 4rem;
+    position: absolute;
+    top: -38%;
+    left: 50px;
+
+    transform: translateY(50%);
+
+}
+
+ul.desc {width: 1200px; margin: 0 auto; display: flex;}
+.desc_tit {line-height: 1.5; width: 50%; font-size: 2rem;}
+.desc_ctt {line-height: 2.2; width: 50%; opacity: 0.8;}
+
+
+
+
+.longDesc_area {
+    width: 100%;
+    background-color: #fff;
+
+    color: #333;
+    font-size: 16px;
+
+}
+
+.meta_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 150px 0;
+
+}
+
+ul.meta {display: flex;}
+ul.meta li {margin-right: 9.4rem;}
+ul.meta li:last-child {margin-right: 0;}
+ .meta_tit {line-height: 2; font-size: 24px; font-weight: bold;}
+ .meta_ctt {line-height: 2; font-size: 16px;  opacity: 0.8;}
+
+
+ .ctt {width: 100%; position: relative;}
+ .ctt h2 {position: absolute; left: 30px;}
+
+ .mockup_samsung_front {width: 1200px; margin: 0 auto;}
+ .mockup_samsung_front img {
+     width: 1200px;
+}
+
+.spead_area { overflow: hidden;
+    width: 100%;
+    height: 900px;
+    margin: 0 auto;
+
+}
+.spead {
+    width: 100%;
+    height: 100%;
+    
+    background: url("../img/samsung_spread.png") no-repeat -0px 0;
+    background-size: cover;
+
+    transform: scale(1.2) rotate(-5deg);
+}
+.val_css {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: -50px;
+    box-shadow:  25px 25px 50px rgba(0, 0, 0, 0.07);
+}
+.val_css img {width: 1024px;}
+
+
+.val_html {width: 793px; margin: 0 auto; margin-top: -50px;
+    
+}
+.val_html img {
+    width: 793px;
+    box-shadow:  25px 25px 50px rgba(0, 0, 0, 0.07);}
