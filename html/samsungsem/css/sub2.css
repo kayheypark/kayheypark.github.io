@@ -5,7 +5,7 @@
 
 /* common */
 
-h2 {font-size: 50px; font-weight: 550;}
+h2 {font-size: 50px; font-weight: 600;}
 th {padding: 17px 10px;}
 td {padding: 16px 20px;}
 
@@ -28,7 +28,7 @@ td {padding: 16px 20px;}
         border-top:  1px solid #000;
         border-bottom:  1px solid #000;
         text-align: center;}
-    .topbg {background: #F3F3F3; bolder; font-size: 17px; }
+    .topbg {background: #F3F3F3; font-size: 17px; }
     .topbg th {font-weight: bold; text-align: center;}
     .title a {text-decoration: none; color: #333;}
     tr td:first-child, .topbg th:first-child, .topbg th:nth-child(2), tr td:nth-child(2) {border-right: 1px solid #ccc;}
