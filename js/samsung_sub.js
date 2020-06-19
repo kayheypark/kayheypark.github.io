@@ -1,6 +1,11 @@
 /* samsung_sub.js */
 
 $(function () {
+
+    //
+    $("a").click(function(e){
+        e.preventDefault();
+    });
     
     //상단에서 내려오는 .gnb
     var flag = false;
@@ -20,4 +25,16 @@ $(function () {
         
     });
     
+
+    $(window).scroll(function(){
+        var scrollTop = $(this).scrollTop() ;
+        if(scrollTop >= 941 ){
+            $("header").addClass("black");
+        } else {
+            $("header").removeClass("black");
+        }
+        console.log(scrollTop);
+
+    });
+
 });

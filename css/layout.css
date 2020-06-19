@@ -17,6 +17,8 @@ header {
     z-index: 50;
     }
 
+header.black a {color: #333 !important;} 
+
     .header_inner {
         display: flex;
         padding-top: 35px;
