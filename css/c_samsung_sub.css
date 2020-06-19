@@ -4,6 +4,24 @@ body {overflow: visible;}
 
 article.samsung {background: url("../img/img_samsung_sub1_b.png") no-repeat -100px -380px; background-size: 150%;}
 /* .divLine {background-image: url("../img/line_wind_b.png") !important;} */
+
+.arrow_back {
+
+    position: absolute;
+z-index: 1;
+left: -65px;
+top: 118px;
+
+    width: 280px;
+    height: 150px;
+    background: url("../img/arrow_back.png") no-repeat 0 0;
+
+    transform:  scale(0.2);
+
+    cursor: pointer;
+
+}
+
 .text_wrap {margin-left: 10%;}
 
 
