@@ -1,9 +1,15 @@
 /* loading.css */
 
 /* 로딩페이지 */
-.progress {z-index: 9999; background: url("../img/loading_layout.png"); color: #fff;
-        position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
-        
+.progress {z-index: 9999; background: url("../img/loading_layout.png") no-repeat 0 0;
+        background-position: top right;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+}        
 /* .loading-tire {
 background: url("../img/tire_x2.png");
 width: 285px;
@@ -29,4 +35,12 @@ animation: loading-tire .5s linear infinite 0s;
         font-family: "Josefin Sans"; font-size: 5rem; text-align: center;}
         
 .progress-complete .progress-bar {background: #DE0000;}
-.progress-complete {color: #fff;}
+.progress.progress-complete {
+        color: #fff;
+        animation: screen 1s ease-in-out 1s;
+}
+
+@keyframes screen {
+        0% {width:100%;}
+        100% {width:0%;}
+}

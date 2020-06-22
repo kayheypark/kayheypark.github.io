@@ -32,8 +32,8 @@ $(function () {
                         clearInterval(progressTimer);
                         $container.addClass('progress-complete');
 
-                        $progressBar.add($progressText).delay(1500).animate({opacity:0},500,function(){
-                            $container.animate({opacity:0}, 500, "swing", function(){
+                        $progressBar.add($progressText).animate({opacity:1},-500,function(){
+                            $container.animate({opacity:1}, 2000, "easeInOutQuint", function(){
                                 $(this).css({"display":"none"});
                             });
 
