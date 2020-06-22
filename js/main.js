@@ -47,9 +47,14 @@ $(function () {
     }//imagesProgress()
     imagesProgress();
 
+    //네비게이션 헤더
+    $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+        $(this).toggleClass('open');
+    });
+
 
     //a 누를때 자동스크롤 방지
-    $(".btn_hamberger ,h1 a, .indicator a, .arrow a").click(function(e){
+    $("#nav-icon3 ,h1 a, .indicator a, .arrow a").click(function(e){
         e.preventDefault();
     });
 
@@ -62,17 +67,17 @@ $(function () {
 
     //상단에서 내려오는 .gnb
     var flag = false;
-    $(".btn_hamberger").click(function (){
+    $("#nav-icon3").click(function (){
 
         if(flag == 0){//열음
             $("#gnb").addClass("on");
-            $(".btn_hamberger i").removeClass("fas fa-bars");
-            $(".btn_hamberger i").addClass("fas fa-times");
+            // $(".btn_hamberger i").removeClass("fas fa-bars");
+            // $(".btn_hamberger i").addClass("fas fa-times");
             flag = true;
         } else {//닫음
             $("#gnb").removeClass("on");
-            $(".btn_hamberger i").removeClass("fas fa-times");
-            $(".btn_hamberger i").addClass("fas fa-bars");
+            // $(".btn_hamberger i").removeClass("fas fa-times");
+            // $(".btn_hamberger i").addClass("fas fa-bars");
             flag = false;
         }
 
@@ -204,12 +209,12 @@ $(function () {
     function gnbLstClk(){ // 리스트 클릭시 버튼 모양을 바꿔준다.
 
             if(flag == 0){//열음
-            $(".btn_hamberger i").removeClass("fas fa-bars");
-            $(".btn_hamberger i").addClass("fas fa-times");
+                $("#nav-icon3").addClass("open");
+            $("#nav-icon3").removeClass("open");
             flag = true;
         } else {//닫음
-            $(".btn_hamberger i").removeClass("fas fa-times");
-            $(".btn_hamberger i").addClass("fas fa-bars");
+            $("#nav-icon3").addClass("open");
+            $("#nav-icon3").removeClass("open");
             flag = false;
         }
 
