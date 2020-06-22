@@ -324,14 +324,25 @@ $(function () {
 
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
-        var secOffset2 = $("#section2").offset();
-        if(scrollTop >= (secOffset2.top/10)){
+        var secOffset2 = $("#section2").offset().top;
+        var secOffset5 = $("#section5").offset().top;
+        var win_h = $(window).height()/2;
+        if(scrollTop >= (secOffset2-win_h) && scrollTop < secOffset5-win_h){
+            $(".kickboard_area").removeClass("big");
             $(".kickboard_area").addClass("mini");
-        } else if (scrollTop < secOffset2.top ) {
-            $(".kickboard_area").css({"position":"fixed"}).css({"top":-25,"left":700}).delay(20000).removeClass("mini");
+        } else if (scrollTop <= secOffset2-win_h) {
+            $(".kickboard_area").css({"position":"fixed"}).css({"top":-25,"left":700}).removeClass("mini");
         }
     
 
+    });
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        var secOffset5 = $("#section5").offset().top;
+        var win_h = $(window).height()/2;
+        if(scrollTop >= secOffset5-win_h){
+            $(".kickboard_area").css({"position":"fixed"}).css({"top":-125,"left":700}).removeClass("mini").addClass("big");
+        }
     });
 
   

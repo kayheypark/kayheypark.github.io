@@ -65,6 +65,13 @@ p.desc {font-weight: 400; font-size: 0.9rem;}
     transform: scale(0.2) !important;
 
 }
+.kickboard_area.big {
+    position: fixed !important;
+    top: 0% !important;
+    left: 45% !important;
+    transform: scale(1.0) !important;
+
+}
 
 /*킥보드 본체*/
 .kickboard {
