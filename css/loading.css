@@ -1,8 +1,22 @@
 /* loading.css */
 
 /* 로딩페이지 */
-.progress {z-index: 9999; background-color: #333; color: #333;
-    position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.progress {z-index: 9999; background: url("../img/loading_layout.png"); color: #fff;
+        position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+        
+/* .loading-tire {
+background: url("../img/tire_x2.png");
+width: 285px;
+height: 285px;
+
+animation: loading-tire .5s linear infinite 0s;
+} */
+
+/* @keyframes loading-tire {
+        0% {transform: rotate(0);}
+        100% {transform: rotate(360deg);}
+} */
+
 
 .progress-bar {position: absolute; left: 0; top: 50%; transform: translateY(-50%);
         box-sizing: border-box;
@@ -12,7 +26,7 @@
         border-radius: 50px;
 }
 .progress-text {position: absolute; top: 50%; transform: translateY(-50%); width: 100%;
-        font-family: "Josefin Sans"; font-size: 22px; text-align: center;}
+        font-family: "Josefin Sans"; font-size: 5rem; text-align: center;}
         
 .progress-complete .progress-bar {background: #DE0000;}
 .progress-complete {color: #fff;}
