@@ -225,14 +225,18 @@ $(function () {
         gnbLstClk();
         });
     $("#gnb ul li:nth-of-type(2) a").click(function(){
-        IdcMove('3');
+        IdcMove('2');
         gnbLstClk();
         });
     $("#gnb ul li:nth-of-type(3) a").click(function(){
-        IdcMove('4');
+        IdcMove('3');
         gnbLstClk();
         });
     $("#gnb ul li:nth-of-type(4) a").click(function(){
+        IdcMove('4');
+        gnbLstClk();
+        });
+    $("#gnb ul li:nth-of-type(5) a").click(function(){
         IdcMove('5');
         gnbLstClk();
         });
