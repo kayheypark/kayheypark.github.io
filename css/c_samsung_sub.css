@@ -65,7 +65,7 @@ ul.desc {width: 1200px; margin: 0 auto; display: flex;}
 ul.meta {display: flex;}
 ul.meta li {margin-right: 9.4rem;}
 ul.meta li:last-child {margin-right: 0;}
- .meta_tit {line-height: 2; font-size: 24px; font-weight: bold;}
+ .meta_tit {line-height: 2; font-size: 24px;}
  .meta_ctt {line-height: 2; font-size: 16px;  opacity: 0.8;}
 
 
