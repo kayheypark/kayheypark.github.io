@@ -33,6 +33,15 @@ animation: loading-tire .5s linear infinite 0s;
 }
 .progress-text {position: absolute; top: 50%; transform: translateY(-50%); width: 100%;
         font-family: "Josefin Sans"; font-size: 5rem; text-align: center;}
+
+.progress-notice {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+
+        transform: translateX(-50%);
+        animation: notice 1s ease-in-out 1s forwards;
+}
         
 .progress-complete .progress-bar {background: #DE0000;}
 .progress.progress-complete {
@@ -41,6 +50,10 @@ animation: loading-tire .5s linear infinite 0s;
 }
 
 @keyframes screen {
-        0% {width:100%;}
-        100% {width:0%;}
+        0% {width:100%; opacity: 1;}
+        100% {width:0%; opacity: 0;}
+}
+@keyframes notice {
+        0% {opacity: 1;}
+        90%,100% {opacity: 0;}
 }
