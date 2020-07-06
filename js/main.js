@@ -54,7 +54,7 @@ $(function () {
 
 
     //a 누를때 자동스크롤 방지
-    $("#nav-icon3 ,h1 a, .indicator a, .arrow a").click(function(e){
+    $("#nav-icon3 ,h1 a, .indicator a, .arrow a, .cssDsg .btn_more, .webDsg .btn_more").click(function(e){
         e.preventDefault();
     });
 
