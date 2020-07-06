@@ -4,7 +4,7 @@
 $(function () {
 
         //a 누를때 자동스크롤 방지
-        $(".to_top a, header a").click(function(e){
+        $(".to_top a, header").click(function(e){
             e.preventDefault();
         });
 
@@ -22,6 +22,7 @@ $(function () {
     if(flag == 0){//열음
     $(".btn_hamberger i").removeClass("fas fa-bars");
     $(".btn_hamberger i").addClass("fas fa-times");
+    
     flag = true;
 } else {//닫음
     $(".btn_hamberger i").removeClass("fas fa-times");
@@ -55,7 +56,6 @@ $(function () {
             $(".btn_hamberger i").addClass("fas fa-bars");
             flag = false;
         }
-        
     });
     
 
