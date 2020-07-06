@@ -167,3 +167,31 @@ p.desc {font-weight: 400; font-size: 0.9rem;}
     transform: scale(1) rotate(-90deg);
     font-size: 5rem;
 }
+
+/*탑으로 버튼*/
+.to_top a {
+    position: fixed;
+    right: 50px;
+    bottom: 40px;
+
+    display: block;
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 53px;
+
+    text-align: center;
+    font-size: 0.7rem;
+
+    border: 1px solid #777;
+    border-radius: 11px;
+    background:#fff;
+    color: #333;
+    transition: .3s all ease-in-out 0s;
+}
+
+.to_top a:hover {
+    border-color: transparent;
+    background:#3a9b22;
+    color :#fff;
+}

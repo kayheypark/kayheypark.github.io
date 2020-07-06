@@ -3,6 +3,11 @@
 
 $(function () {
 
+        //a 누를때 자동스크롤 방지
+        $(".to_top a").click(function(e){
+            e.preventDefault();
+        });
+
 
 
     
@@ -65,6 +70,22 @@ $(function () {
         console.log(scrollTop);
 
     });
+
+    $(window).scroll(function(){
+        var scrollTop = $(this).scrollTop() ;
+
+        if(scrollTop >= 100 ){
+            $(".to_top a").css({"opacity":"1"});
+        } else {
+            $(".to_top a").css({"opacity":"0"});
+        }
+
+    });
+
+    $(".to_top a").click(function(){
+        $('html, body').stop().animate({"scrollTop" : 0}, 3000, "easeInOutQuint");
+    });
+
 
 
     // $("header").click(function(){
