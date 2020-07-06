@@ -5,6 +5,13 @@
     right: 10%;
     background: url("../img/img_alarmmap.jpg") no-repeat -0px -0px;
     background-size: 100%;
+    transition: all .5s ease-out 0s;
+}
+
+.appDsg .view_area:hover {
+    background-size: 108%;
+    background-position: -30px -30px;
+    
 }
 
 .appDsg .view_area .order {
@@ -13,10 +20,19 @@
 
 .webDsg .view_area {
     right: 10%;
-    background: url("../img/img_cube.png") no-repeat 0 0;
+    background: url("../img/img_cube.png") no-repeat 0 50px;
     background-size: 100%;
 }
 
 .webDsg .view_area .order {
     right: -18%;
+}
+
+.cssDsg .view_area {
+    padding-top: 159px;
+    padding-left: 80px;
+
+}
+.cssDsg .view_area .order{
+    right: -8%;
 }
