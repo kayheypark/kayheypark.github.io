@@ -236,6 +236,27 @@ overflow: hidden;
     transform: scale(1);
 }
 
+.works_coding .l_js  {
+    vertical-align: bottom;
+    width: 48px;
+}
+
+.works_coding span.type {
+    left: 53px !important;
+    top: 0 !important;
+}
+
+.instagram h3,
+.kakao h3 {margin-top: 22px;}
+
+.instagram .view_area {
+    right: 0;
+}
+
+.instagram .view_area > .order {
+    right: 3%;
+}
+
 .page_instagram {
     position: absolute;
     top: 0%;
